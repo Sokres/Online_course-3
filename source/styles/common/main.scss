@@ -73,10 +73,30 @@
   opacity: 1;
   transform: translateY(0%);
 }
+.about-eng__pretext{
+  font-size: 18px;
+}
 .about-eng__text{
+  position: relative;
   font-weight: 400;
   color: var(--dark2);
+  font-size: 16px;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--yellow);
+
+  }
 }
+.about-eng__info{
+  font-size: 20px;
+  color: var(--blue2)
+}
+
 
 /* Кнопка ЗАДАТЬ ВОПРОС */
 
@@ -238,7 +258,7 @@
   }
   .about-eng__text{
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
   }
   .three-day{
