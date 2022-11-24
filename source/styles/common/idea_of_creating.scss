@@ -1,0 +1,56 @@
+.idea__wrap{
+
+}
+.idea{
+
+  padding: 20px 20px;
+  background-color: var(--white2);
+}
+.idea__title{
+  text-align: center;
+}
+.idea__image{
+  border-radius: 9px;
+}
+.idea__info{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.notion__item{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 9px;
+  box-shadow: 0 0 0 1px var(--yellow);
+}
+.notion__text{
+  margin: 0;
+}
+@include media-sm{
+  .idea__title-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .idea__image{
+    max-width: 450px;
+  }
+  .notion{
+    display: flex;
+    flex-wrap: wrap
+  }
+  .notion__item{
+    width: calc(50% - 30px);
+    margin: 20px 15px;
+  }
+
+}
+@include media-md{
+  .idea__wrap{
+    display: flex;
+  }
+  .idea__image{
+    max-width: 250px;
+  }
+}

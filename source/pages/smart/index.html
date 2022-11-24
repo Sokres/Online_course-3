@@ -30,7 +30,7 @@
   <include src="build/@gts.html"> </include>
 </head>
 
-<body>
+<body id="stick">
   <include src="build/@gth.html"> </include>
   <h1 class="visually-hidden">Курс английского языка S.M.A.R.T</h1>
   <header class="header-page" id="nav-content" aria-hidden="true">
@@ -57,14 +57,14 @@
         </div>
         <ul class="menu__alt-list">
           <li class="menu__alt-item "><a href="../lvl-test" class="menu__alt-link ">Тест</a></li>
-          <li class="menu__alt-item"><a href="#" class="menu__alt-link">Компаниям</a></li>
+
         </ul>
       </nav>
     </div>
     <div id="close" class="header-page__blok-menu"></div>
   </header>
 
-  <main class="main-page smart">
+  <main class="main-page smart ">
     <div class="main-page__social social-icon">
       <a class="social-icon__link " href="https://t.me/anglofan" title="Ссылка на Вконтакте" target="_blank"><svg
           class="social-icon--inline" width="30" height="30">
@@ -78,10 +78,7 @@
           class="social-icon--inline" width="30" height="30">
           <use xlink:href="#vk-line"></use>
         </svg></a>
-      <a class="social-icon__link" href="https://www.facebook.com/anglofanru" title="Ссылка на Facebook"
-        target="_blank"><svg class="social-icon--inline" width="30" height="30">
-          <use xlink:href="#facebook-line"></use>
-        </svg></a>
+
     </div>
     <picture class="main-page__avatar">
       <source type="image/webp" width="390" srcset="../img/webp/ava-smart_x2.webp 2x, ../img/webp/ava-smart_x1.webp 1x">
@@ -94,7 +91,9 @@
       <p class="about-eng__text">самый удобный курс английского в твоей жизни</p>
       <ul class="about-eng__list">
         <li class="about-eng__item">15-20 минут в день</li>
-        <li class="about-eng__item">от 790 рублей в месяц</li>
+        <li class="about-eng__item">от 990 рублей в месяц</li>
+        <li class="about-eng__item">более 300 человек повысили свой уровень</li>
+        <li class="about-eng__item">старт курса сейчас</li>
       </ul>
     </div>
     <div class="main-page__qestion three-day">
@@ -103,12 +102,20 @@
     </div>
     <div class="main-page__patch"></div>
     <div class="main-page__scroll-about"></div>
+    <div class="sub-menu">
+      <ul class="sub-menu__wrap">
+        <li><a class="sub-menu__btn" href="#benefits">Преимущества</a></li>
+        <li><a class="sub-menu__btn" href="#guarantee">Гарантии</a></li>
+        <li><a class="sub-menu__btn" href="#price">Тарифы</a></li>
+        <li><a class="sub-menu__btn" href="#courseProgramm">Программа</a></li>
+      </ul>
+    </div>
   </main>
 
   <!-- =====Что такое курсы англофан===== -->
   <section id="next" class="what-courses smart">
     <h2 class="what-courses__title">ДЛЯ КОГО КУРС</h2>
-    <h3 class="what-courses__subtitle">для каждого, у кого есть всего 15-20 минут в день и 790 рублей в месяц</h3>
+    <!-- <h3 class="what-courses__subtzeitle">для каждого, у кого есть всего 15-20 минут в день и 790 рублей в месяц</h3> -->
     <div class="what-courses__wrap">
       <!-- <div class="what-courses__content">
         <img src="../img/pople.svg" alt="люди" class="what-courses__img what-courses__img--none" width="50" height="50">
@@ -162,7 +169,7 @@
 
   <!-- =====Преимущества===== -->
 
-  <section class="benefits">
+  <section id="benefits" class="benefits section-menu">
     <h2 class="benefits__title">ПРЕИМУЩЕСТВА КУРСА S.M.A.R.T.</h2>
     <div class="benefits__wrap">
       <ul class="benefits__container plus-smart">
@@ -309,7 +316,7 @@
 
   <!-- ===== Гарантии ===== -->
 
-  <section class="guarantee smart">
+  <section id="guarantee" class="guarantee smart section-menu">
     <h2 class="guarantee__title">ГАРАНТИИ</h2>
     <h3 class="guarantee__subtitle">я уверена в качестве курса, поэтому не боюсь дать вам 7 дней тест-драйва и
       возможность оплачивать помесячно, а не сразу весь курс!</h3>
@@ -566,8 +573,8 @@
         <h3 class="pay__title">4 недели<span class="pay__content--add">с обратной связью</span></h3>
 
         <div class="pay__cost">
-          <span>3 890₽</span>
-          3 290₽</div>
+          <span>4 990₽</span>
+          3 990₽</div>
 
         <h4 class="pay__title-form">Выбери свой уровень </h4>
         <div id="price4OsError" class="pay__error"><span class="pay__error--red-text">Вы не выбрали уровень</span>
@@ -600,7 +607,7 @@
           </form>
         </div>
 
-        <div class="pay__discount">Скидка 16%</div>
+        <div class="pay__discount">Скидка 20%</div>
       </div>
     </div>
   </section>
@@ -630,7 +637,7 @@
 
   <!-- ===== Программа ===== -->
 
-  <section id="courseProgramm" class="programm">
+  <section id="courseProgramm" class="programm section-menu">
     <h2 class="programm__title">ПРОГРАММА ОБУЧЕНИЯ</h2>
     <div class="programm__wrap">
       <div class="accordion__box">
@@ -912,7 +919,19 @@
   <include src="build/@footer.html"> </include>
 
   <!-- ===== Модальные окна ===== -->
-
+  <div class=" modal-overlay modal-js-overlay"> </div>
+  <div class="modal" data-modal="timeModal">
+    <div class="modal__plus modal-js-close">+</div>
+    <div class="modal__container">
+      <div class="banner-modal">
+        <img src="/img/gift.svg" alt="Подарок" width="100" height="100" class="banner-modal__image">
+        <h3 class="banner-modal__title">ВАШ ПОДАРОК</h3>
+        <p class="banner-modal__text">ВСЕМ, КТО ЗАРЕГИСТРИРУЕТСЯ НА БЕСПЛАТНУЮ НЕДЕЛЮ в течение 30 минут</p>
+        <p class="banner-modal__info">Я ДАРЮ урок по песне Pretty woman и WORKBOOK по артиклям (обычная цена 590 руб)</p>
+        <a href="https://get.anglofan.ru/registration__free/" class="three-day__link">ХОЧУ ПОДАРОК</a>
+      </div>
+    </div>
+  </div>
 
   <div class="visually-hidden">
     <include src="build/img/sprite.svg"></include>
@@ -921,6 +940,7 @@
   <script src="/js/smart.js"></script>
   <script src="/js/main.js"></script>
   <!-- <script src="/js/alt.js"></script> -->
+  <!-- <script src="/js/test1.js"></script> -->
 </body>
 
 </html>

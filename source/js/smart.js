@@ -142,4 +142,22 @@
      }
 
   })();
+  (function(){
+    document.addEventListener("scroll", handleScroll);
+let scrollToNav = document.querySelector(".sub-menu");
 
+
+function handleScroll() {
+
+  if (pageYOffset > document.documentElement.clientHeight ) {
+    //show button
+    if(!scrollToNav.classList.contains("sub-menu--active"))
+    scrollToNav.classList.add("sub-menu--active")
+  } else {
+    //hide button
+    if(scrollToNav.classList.contains("sub-menu--active"))
+    scrollToNav.classList.remove("sub-menu--active")
+  }
+}
+
+    })();

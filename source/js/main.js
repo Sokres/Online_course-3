@@ -15,10 +15,8 @@
 
           var modalId = this.getAttribute('data-modal'),
               modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
-
-
-          modalElem.classList.add('modal--active');
-          overlay.classList.add('modal--active');
+              modalElem.classList.add('modal--active');
+              overlay.classList.add('modal--active');
        });
     });
 
@@ -48,9 +46,20 @@
           document.querySelector('.modal.modal--active').classList.remove('modal--active');
          this.classList.remove('modal--active');
      });
+     /* отыкрытие модального окна по счетчику */
 
+     function modalTimesUp(){
+      var modalTime = document.querySelector('.modal[data-modal="timeModal"]');
+      modalTime.classList.add('modal--active');
+            overlay.classList.add('modal--active');
+    };
+    setTimeout(modalTimesUp, 300000);
+
+    /* ---------- */
   });
+
   })();
+
 
 
 /* кнопка связи в соц сетях */

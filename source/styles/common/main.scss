@@ -77,20 +77,19 @@
   font-size: 18px;
 }
 .about-eng__text{
-  position: relative;
   font-weight: 400;
   color: var(--dark2);
   font-size: 16px;
-  &::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--yellow);
+  // &::after{
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 2px;
+  //   background: var(--yellow);
 
-  }
+  // }
 }
 .about-eng__info{
   font-size: 20px;
@@ -188,26 +187,6 @@
 .scroll-down{
   display: none;
 }
-// .scroll-down__list:hover .scroll-down__item,
-// .scroll-down__list:focus .scroll-down__item{
-//   transform: scale(1.2);
-//   outline: none;
-//   transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
-// }
-.scroll-down__list:hover,
-.scroll-down__list:focus{
-  transform: scale(1.2);
-  outline: none;
-  transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
-}
-.scroll-down__item{
-  width: 40px;
-  height: 40px;
-}
-.scroll-down__item--inline{
-  width: 100%;
-  height: auto;
-}
 
 .three-day__link{
   @extend .btn;
@@ -244,6 +223,7 @@
   .about-eng__item{
     display: flex;
     align-items: center;
+    // margin-left: -25px;
   }
   .about-eng__item::before{
     content: "";
@@ -257,8 +237,8 @@
   margin-bottom: 0;
   }
   .about-eng__text{
-    margin-top: 10px;
-    font-size: 16px;
+    margin-top: 20px;
+    font-size: 18px;
     font-weight: 500;
   }
   .three-day{
@@ -273,6 +253,46 @@
     transform: translateX(-50%);
     z-index: 999;
   }
+  /* скролл меню */
+.sub-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 12px 16px -7px rgba(34, 60, 80, 0.2);
+  background-color: var(--white);
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(-200px);
+  transition: all 1s ease-in-out;
+}
+.sub-menu--active{
+  opacity: 1;
+  transform: translateY(0);
+
+  transition: all 0.5s ease-in-out;
+}
+.sub-menu__wrap{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 5px;
+  overflow-x: scroll;
+
+}
+.sub-menu::-webkit-scrollbar,
+.sub-menu__wrap ::-webkit-scrollbar {
+  width: 0;
+}
+.sub-menu__btn{
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px var(--yellow);
+  color: var(--dark);
+}
 
 }
 /* Стили для интенсива */
@@ -337,7 +357,7 @@
     line-height: 1;
   }
 }
-
+/* Стили для средних Экранов */
 @include media-md{
   .smart .main-page__content{
     align-self: center;
@@ -380,6 +400,25 @@
   .three-day{
     min-width: 300px;
   }
+  .smart .about-eng__text{
+    width: 80%;
+    line-height: 1.3;
+    font-size: 26px;
+  }
+  .smart{
+    .sub-menu__wrap{
+      max-width: 1000px;
+      margin: 0 auto;
+      justify-content: space-around;
+      overflow: hidden;
+    }
+    .sub-menu{
+      justify-content: space-around;
+      // max-width: 1200px;
+      // margin: 0 auto;
+    }
+  }
+
 }
 @include media-lg{
   .main-page{
@@ -428,4 +467,15 @@
   text-shadow: 1px 1px 1px var(--blue);
 }
 
+/* стили для практического марафона */
 
+.about-eng__pretext{
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--yellow2);
+}
+.about-eng__text{
+  font-weight: 400;
+  color: var(--dark2);
+  font-size: 16px;
+}
