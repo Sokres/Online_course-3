@@ -95,7 +95,22 @@
   font-size: 20px;
   color: var(--blue2)
 }
+.info-message{
+  display: flex;
+  // align-items: center;
+  max-width: 350px;
+  box-shadow: -4px -4px 31px #FFFFFF, 4px 4px 32px #C9C9C9;
+  border-radius: 12px;
 
+}
+.info-message__img{
+  margin: 10px 20px;
+  width: 8px;
+  height: 40px;
+}
+.info-message__text{
+  font-weight: 500;
+}
 
 /* Кнопка ЗАДАТЬ ВОПРОС */
 
@@ -293,29 +308,16 @@
   box-shadow: 0 0 0 1px var(--yellow);
   color: var(--dark);
 }
-
+.sub-menu__btn--active{
+  background-color: var(--yellow);
+}
 }
 /* Стили для интенсива */
 .intensive{
   .about-eng__box{
     margin-top: 40px;
   }
-  .info-message{
-    display: flex;
-    // align-items: center;
-    max-width: 350px;
-    box-shadow: -4px -4px 31px #FFFFFF, 4px 4px 32px #C9C9C9;
-    border-radius: 12px;
 
-  }
-  .info-message__img{
-    margin: 10px 20px;
-    width: 8px;
-    height: 40px;
-  }
-  .info-message__text{
-    font-weight: 500;
-  }
   .three-day{
     display: block;
 
