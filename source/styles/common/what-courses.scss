@@ -19,6 +19,8 @@
 
 .what-courses__content{
   display: flex;
+  align-items: flex-start;
+  margin-top: 16px;
 }
 .what-courses__img{
   width: 50px;
@@ -32,6 +34,14 @@
 }
 .what-courses__aubtitle{
   margin-bottom: 0;
+  margin-top: 0;
+}
+.what-courses__aubtitle + .what-courses__text{
+  margin-top: 16px;
+}
+.what-courses__text{
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 @include media-md{
   .what-courses{

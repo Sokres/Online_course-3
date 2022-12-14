@@ -48,12 +48,12 @@
      });
      /* отыкрытие модального окна по счетчику */
 
-     function modalTimesUp(){
+/*      function modalTimesUp(){
       var modalTime = document.querySelector('.modal[data-modal="timeModal"]');
       modalTime.classList.add('modal--active');
             overlay.classList.add('modal--active');
     };
-    setTimeout(modalTimesUp, 300000);
+    setTimeout(modalTimesUp, 30); */
 
     /* ---------- */
   });

@@ -59,34 +59,6 @@
 
 })();
 
-(function () {
-  let forms = document.getElementById("formprice16Bs");
-  let radio16bs = document.price16Bs.price16BsRadio.length;
-
-  for (var i = 0; i < radio16bs; i++) {
-    document.price16Bs.price16BsRadio[i].addEventListener('click',
-      function () {
-        forms.action = this.value;
-      }
-    )
-  }
-  // Проверка на пустоту
-
-  forms.onsubmit = function () {
-    let radioElems = document.getElementsByName('price16BsRadio');
-    let error = document.querySelector('#price16BsError');
-    let submit = false;
-    [].forEach.call(radioElems, function (item) {
-      item.checked && (submit = true);
-    });
-
-    if (!submit) {
-      error.style.display = 'block';
-      return false;
-    }
-  }
-
-})();
 
 (function () {
   let forms = document.getElementById("formprice36Bs");
@@ -144,6 +116,7 @@
   }
 
 })();
+/* ---активация навигации по странице--- */
 (function () {
   document.addEventListener("scroll", handleScroll);
   let scrollToNav = document.querySelector(".sub-menu");
@@ -162,28 +135,62 @@
     }
   }
 })();
+
+/* ---навигация по якорным ссылкам--- */
+(function(){
+  document.querySelectorAll(".nav-scrollBy[href^='#']").forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        let href = this.getAttribute("href").substring(1);
+        const scrollTarget = document.getElementById(href);
+        const topOffset = document.querySelector(".sub-menu").offsetHeight;
+        // const topOffset = 0;
+        // если не нужен отступ сверху
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    });
+});
+})();
+/* ---подсвечиваем пункты меню и скорлим в право--- */
 (function () {
   var sectionss = document.querySelectorAll(".section-menu");
-  var navBtn =  document.querySelectorAll(".sub-menu__btn");
+  var navBtn = document.querySelectorAll(".sub-menu__btn");
+  var subMenu = document.querySelector(".sub-menu__wrap");
+
   window.onscroll = () => {
     let current = "";
 
     sectionss.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 60) {
+      const topOffset = document.querySelector(".sub-menu").offsetHeight;
+      if (pageYOffset >= sectionTop - topOffset - 100) {
         current = section.getAttribute("id");
       }
     });
 
     navBtn.forEach((li) => {
-      li.classList.remove("sub-menu__btn--active");
+      subMenu.scrollBy({
+        left: -200
+    });
+
+      li.classList.remove("sub-menu__btn--active")
       if (li.classList.contains(current)) {
-        li.classList.add("sub-menu__btn--active");
+
+        subMenu.scrollBy({
+          left: 200
+      });
+        li.classList.add("sub-menu__btn--active")
+
       }
     });
   };
 
-})();
+}) ();
 /* (function(){
   var section = document.querySelectorAll(".section-menu");
   var sections = {};
