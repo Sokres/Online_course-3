@@ -74,19 +74,23 @@
         target="_blank"><svg class="social-icon--inline" width="30" height="30">
           <use xlink:href="#instagram-line"></use>
         </svg></a>
-      <a class="social-icon__link" href="https://vk.com/anglofanru" title="Ссылка на Вконтакте" target="_blank"><svg
-          class="social-icon--inline" width="30" height="30">
+      <a class="social-icon__link" href="https://vk.com/anglofanru" title="Ссылка на Вконтакте" target="_blank">
+        <svg class="social-icon--inline" width="30" height="30">
           <use xlink:href="#vk-line"></use>
-        </svg></a>
+        </svg>
+      </a>
 
     </div>
-    <picture class="main-page__avatar">
-      <source type="image/webp" width="390" srcset="../img/webp/ava-smart_x2.webp 2x, ../img/webp/ava-smart_x1.webp 1x">
-      <img class="main-page__avatar--pic" width="390" src="../img/ava-smart_x1.jpg"
+    <div class="main-page__avatar">
+      <div class="main-page__avatar--shadow rellax" data-rellax-speed="-1" ></div>
+      <picture class="main-page__avatar--wrap">
+        <source type="image/webp" width="390" srcset="../img/webp/ava-smart_x2.webp 2x, ../img/webp/ava-smart_x1.webp 1x">
+        <img class="main-page__avatar--pic" width="390" src="../img/ava-smart_x1.jpg"
         srcset="../img/ava-smart_x2.jpg 2x, ../img/ava-smart_x1.jpg 1x" alt="Фото Карины">
-    </picture>
+      </picture>
+    </div>
 
-    <div class="main-page__content about-eng">
+    <div class="main-page__content about-eng rellax" data-rellax-speed="-1">
       <h2 class="about-eng__title">S.M.A.R.T.</h2>
       <p class="about-eng__text">самый удобный курс английского в твоей жизни</p>
       <ul class="about-eng__list">
@@ -104,8 +108,10 @@
     <div class="main-page__scroll-about"></div>
     <div class="sub-menu">
       <ul class="sub-menu__wrap">
-        <li><a class="sub-menu__logo nav-scrollBy up" href="#nav-content"><svg class="sub-menu__logo--inline" width="40" height="40">
-          <use xlink:href="#logo-mini"></svg></a></li>
+        <li><a class="sub-menu__logo nav-scrollBy up" href="#nav-content"><svg class="sub-menu__logo--inline" width="40"
+              height="40">
+              <use xlink:href="#logo-mini">
+            </svg></a></li>
         <li><a class="sub-menu__btn nav-scrollBy benefits" href="#benefits">Преимущества</a></li>
         <li><a class="sub-menu__btn nav-scrollBy guarantee" href="#guarantee">Гарантии</a></li>
         <li><a class="sub-menu__btn nav-scrollBy price" href="#price">Тарифы</a></li>
@@ -113,21 +119,24 @@
       </ul>
     </div>
   </main>
-<!-- Другой способ заговорить на английском -->
-<section class="alt-method">
-  <div class="alt-method__wrap">
-    <h2 class="alt-method__title">СОВСЕМ ДРУГОЙ СПОСОБ ЗАГОВОРИТЬ НА АНГЛИЙСКОМ</h2>
-    <div class="alt-method__info">
-      <h3 class="alt-method__subtitle">Почему мои студенты получают хорошие результаты?</h3>
-      <img  class="alt_method__image" src="../img/alt_method.jpg" width="390" alt="Поднимем палец вверх">
-      <ul class="alt-method__list">
-        <li class="alt-method__item">Курс SMART делает изучение языка вашей ежедневной ПРИВЫЧКОЙ, как пообедать или почитать перед сном.</li>
-        <li class="alt-method__item">Понятные видео объяснения и небольшие интересные задания помогут не потерять интерес к английскому даже спустя несколько месяцев.</li>
-        <li class="alt-method__item">Вы сомневаетесь, что понравится, что сможете, что будет полезно? Понимаю! Тогда попробуйте бесплатную (совсем бесплатную) неделю и развейте свои сомнения!</li>
-      </ul>
+  <!-- Другой способ заговорить на английском -->
+  <section class="alt-method">
+    <div class="alt-method__wrap">
+      <h2 class="alt-method__title">СОВСЕМ ДРУГОЙ СПОСОБ ЗАГОВОРИТЬ НА АНГЛИЙСКОМ</h2>
+      <div class="alt-method__info">
+        <h3 class="alt-method__subtitle">Почему мои студенты получают хорошие результаты?</h3>
+        <img class="alt_method__image" src="../img/alt_method.jpg" width="390" alt="Поднимем палец вверх">
+        <ul class="alt-method__list">
+          <li class="alt-method__item">Курс SMART делает изучение языка вашей ежедневной ПРИВЫЧКОЙ, как пообедать или
+            почитать перед сном.</li>
+          <li class="alt-method__item">Понятные видео объяснения и небольшие интересные задания помогут не потерять
+            интерес к английскому даже спустя несколько месяцев.</li>
+          <li class="alt-method__item">Вы сомневаетесь, что понравится, что сможете, что будет полезно? Понимаю! Тогда
+            попробуйте бесплатную (совсем бесплатную) неделю и развейте свои сомнения!</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
   <!-- =====Что такое курсы англофан===== -->
   <section id="next" class="what-courses smart">
     <h2 class="what-courses__title">ДЛЯ КОГО КУРС</h2>
@@ -229,13 +238,14 @@
           <li class="plus-smart__item">письмо (учимся излагать свои мысли письменно)</li>
           <li class="plus-smart__item">чтение (читаем актуальные статьи, книги, соц сети носителей)</li>
         </ul>
-        </ul>
+      </ul>
       <ul class="benefits__container plus-smart">
         <li class="plus-smart__number">7</li>
         <li class="plus-smart__title">ЭФФЕКТИВНОСТЬ</li>
         <li class="plus-smart__text"></li>
         <ul class="plus-smart__list">
-          <li class="plus-smart__text">Большая часть заданий взята не из учебников, а из реальной жизни: сериалы, YouTube, песни, общение и многое другое. </li>
+          <li class="plus-smart__text">Большая часть заданий взята не из учебников, а из реальной жизни: сериалы,
+            YouTube, песни, общение и многое другое. </li>
         </ul>
       </ul>
       <ul class="benefits__container plus-smart">
@@ -268,17 +278,21 @@
   </section>
   <!-- ===== Какие проблемы ===== -->
 
-  <section class="problem">
-<div class="problem__info-box">
-  <h2 class="problem__title">КАКИЕ ПРОБЛЕМЫ ВЫ РЕШИТЕ</h2>
-  <div class="info-message">
-    <img class="info-message__img" src="../img/voskl.svg" width="20" height="50" alt="Восклицательный знак">
-    <div class="infomessage__wrap">
-      <p class="info-message__text">Ключевая ошибка многих курсов - переход сразу к говорению. Знаю, что вам нравится "такое", но это очень неправильно, тк приводит к заучиванию своих же ошибок, а потом их никак не убрать из речи. На моем курсе мы проходим все этапы - от формирования речевого образца до выведения в спонтанную речь. Говорение перестает быть проблемой!</p>
+  <section class="problem sidebar">
+    <div class="problem__info-box" >
+      <div class="widget js-sticky-widget"></div>
+      <h2 class="problem__title">КАКИЕ ПРОБЛЕМЫ ВЫ РЕШИТЕ</h2>
+      <div class="info-message">
+        <img class="info-message__img" src="../img/voskl.svg" width="20" height="50" alt="Восклицательный знак">
+        <div class="infomessage__wrap">
+          <p class="info-message__text">Ключевая ошибка многих курсов - переход сразу к говорению. Знаю, что вам
+            нравится "такое", но это очень неправильно, тк приводит к заучиванию своих же ошибок, а потом их никак не
+            убрать из речи. На моем курсе мы проходим все этапы - от формирования речевого образца до выведения в
+            спонтанную речь. Говорение перестает быть проблемой!</p>
 
+        </div>
+      </div>
     </div>
-  </div>
-</div>
     <div class="problem__wrap">
       <ul class="problem__container smart-option">
         <li class="smart-option__num">1</li>
@@ -396,7 +410,8 @@
       </li>
       <li class="progress__box">
         <h3 class="progress__subtitle">НАВЫКИ</h3>
-        <p class="passage__text">урок состоит из видео объяснения на русском и заданий на говорение, понимание на слух, письмо, чтение, грамматику и лексику</p>
+        <p class="passage__text">урок состоит из видео объяснения на русском и заданий на говорение, понимание на слух,
+          письмо, чтение, грамматику и лексику</p>
       </li>
       <li class="progress__box">
         <h3 class="progress__subtitle">ОБРАТНАЯ СВЯЗЬ</h3>
@@ -404,12 +419,15 @@
       </li>
       <li class="progress__box progress__box--big-box">
         <h3 class="progress__subtitle">ТАРИФЫ</h3>
-        <p class="passage__text">1.тариф на самопроверке - в следующем уроке очень подробные ответы и пояснения к каждому заданию</p>
-        <p class="passage__text">2.тариф с обратной связью - можно сделать и отправить дз в любое время в пределах оплаченного периода</p>
+        <p class="passage__text">1.тариф на самопроверке - в следующем уроке очень подробные ответы и пояснения к
+          каждому заданию</p>
+        <p class="passage__text">2.тариф с обратной связью - можно сделать и отправить дз в любое время в пределах
+          оплаченного периода</p>
       </li>
       <li class="progress__box">
         <h3 class="progress__subtitle">МЕСТО И ВРЕМЯ</h3>
-        <p class="passage__text">делаете задания, когда и где вам удобно: в офисе, спортивном зале, пробке или даже в отпуске у моря</p>
+        <p class="passage__text">делаете задания, когда и где вам удобно: в офисе, спортивном зале, пробке или даже в
+          отпуске у моря</p>
       </li>
       <li class="progress__box">
         <h3 class="progress__subtitle">УРОВНИ</h3>
@@ -425,7 +443,8 @@
       </li>
       <li class="progress__box progress__box--big-box">
         <h3 class="progress__subtitle">ДОСТУП</h3>
-        <p class="passage__text">каждый урок доступен 35 дней, потом он удаляется. Это стимулирует вас не откладывать обучение - проверено и одобрено многими учениками</p>
+        <p class="passage__text">каждый урок доступен 35 дней, потом он удаляется. Это стимулирует вас не откладывать
+          обучение - проверено и одобрено многими учениками</p>
       </li>
     </ul>
   </section>
@@ -452,40 +471,40 @@
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-smart__1.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-smart__1.jpg"  />
+            <!-- <div class="swiper-lazy-preloader"></div> -->
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-smart__2.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-smart__2.jpg"  />
+            <!-- <div class="swiper-lazy-preloader"></div> -->
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-smart__3.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-smart__3.jpg"  />
+            <!-- <div class="swiper-lazy-preloader"></div> -->
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-smart__4.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-smart__4.jpg"  />
+            <!-- <div class="swiper-lazy-preloader"></div> -->
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-smart__5.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-smart__5.jpg"  />
+            <!-- <div class="swiper-lazy-preloader"></div> -->
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-smart__6.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-smart__6.jpg"  />
+            <!-- <div class="swiper-lazy-preloader"></div> -->
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-smart__7.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-smart__7.jpg"  />
+            <!-- <div class="swiper-lazy-preloader"></div> -->
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-smart__8.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-smart__8.jpg"  />
+            <!-- <div class="swiper-lazy-preloader"></div> -->
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-smart__9.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-smart__9.jpg"  />
+            <!-- <div class="swiper-lazy-preloader"></div> -->
           </div>
 
         </div>
@@ -505,8 +524,8 @@
         <h3 class="pay__title">4 недели<span class="pay__content--add">без обратной связи</span></h3>
         <!-- <p class="pay__learn">Для тех кто хочет попробовать</p> -->
         <div class="pay__cost">
-          <span>1 590₽</span>
-          1 290₽</div>
+          <span>2 200₽</span>
+          1 590₽</div>
 
         <h4 class="pay__title-form">Выбери свой уровень</h4>
         <div id="price4BsError" class="pay__error"><span class="pay__error--red-text">Вы не
@@ -539,56 +558,17 @@
             <button type="submit" id="telegramPriceFourBS" class="pay__pay">Оплатить</button>
           </form>
         </div>
-        <div class="pay__discount">Скидка 15%</div>
+        <div class="pay__discount">Скидка 29%</div>
       </div>
-      <!-- 16 недель  -->
-<!--       <div class="pay price__container">
-        <h3 class="pay__title">16&nbsp;недель<span class="pay__content--add">без обратной связи</span></h3>
 
-        <div class="pay__cost">
-          <span>5 190₽</span>
-          3 590</div>
-        <h4 class="pay__title-form">Выбери свой уровень </h4>
-        <div id="price16BsError" class="pay__error"><span class="pay__error--red-text">Вы не
-            выбрали уровень</span>
-          <span class="pay__error--why-text">если не знаете свой уровень</span>
-          <a href="../lvl-test">пройдите тест</a>
-        </div>
-        <div class="pay__lvl">
-          <form action="" id="formprice16Bs" class=" Price_s" name="price16Bs">
-            <div class="pay__form">
-              <label for="lvl_a1_m">
-                <input class="visually-hidden" type="radio" name="price16BsRadio" id="lvl_a1_m"
-                  value="https://get.anglofan.ru/s16wA1">
-                <span class="pay__form--radio"></span>
-                <span class="pay__form--lvl">A1</span>
-              </label>
-              <label for="lvl_a2_m">
-                <input class="visually-hidden" type="radio" name="price16BsRadio" id="lvl_a2_m"
-                  value="https://get.anglofan.ru/s16wA2">
-                <span class="pay__form--radio"></span>
-                <span class="pay__form--lvl">A2</span>
-              </label>
-              <label for="lvl_b1_m">
-                <input class="visually-hidden" type="radio" name="price16BsRadio" id="lvl_b1_m"
-                  value="https://get.anglofan.ru/s16wB1">
-                <span class="pay__form--radio"></span>
-                <span class="pay__form--lvl">B1</span>
-              </label>
-            </div>
-            <button type="submit" id="telegramPrice16BS" class="pay__pay">Оплатить</button>
-          </form>
-        </div>
-        <div class="pay__discount">Скидка 31%</div>
-      </div> -->
 
 
       <div class="pay price__container">
         <h3 class="pay__title">36&nbsp;недель<br>полный курс <span class="pay__content--add">без обратной
             связи</span></h3>
         <div class="pay__cost">
-          <span>12 590₽</span>
-          9 990 </div>
+          <span>19 800₽</span>
+          12 990₽</div>
         <h4 class="pay__title-form">Выбери свой уровень </h4>
         <div id="price36BsError" class="pay__error"><span class="pay__error--red-text">Вы не
             выбрали уровень</span>
@@ -620,7 +600,7 @@
             <button type="submit" id="telegramPrice36BS" class="pay__pay">Оплатить</button>
           </form>
         </div>
-        <div class="pay__discount">Скидка 20%</div>
+        <div class="pay__discount">Скидка 35%</div>
       </div>
 
 
@@ -628,8 +608,8 @@
         <h3 class="pay__title">4 недели<span class="pay__content--add">с обратной связью</span></h3>
 
         <div class="pay__cost">
-          <span>4 990₽</span>
-          3 990₽</div>
+          <span>5 900₽</span>
+          4 890₽</div>
 
         <h4 class="pay__title-form">Выбери свой уровень </h4>
         <div id="price4OsError" class="pay__error"><span class="pay__error--red-text">Вы не выбрали уровень</span>
@@ -662,13 +642,103 @@
           </form>
         </div>
 
-        <div class="pay__discount">Скидка 20%</div>
+        <div class="pay__discount">Скидка 18%</div>
+      </div>
+      <div class="price__container pay">
+        <h3 class="pay__title">4 недели<span class="pay__content--add">с обратной связью</span></h3>
+
+        <div class="pay__cost">
+          <span>53 100₽</span>
+          39 990₽</div>
+
+        <h4 class="pay__title-form">Выбери свой уровень </h4>
+        <div id="price4OsError" class="pay__error"><span class="pay__error--red-text">Вы не выбрали уровень</span>
+          <span class="pay__error--why-text">если не знаете свой уровень</span>
+          <a href="../lvl-test">пройдите тест</a>
+        </div>
+        <div class="pay__lvl">
+          <form action="" id="formprice4Os" class=" Price_s" name="price4Os">
+            <div class="pay__form">
+              <label for="lvl_a1_os">
+                <input class="visually-hidden" type="radio" name="price4OsRadio" id="lvl_a1_os"
+                  value="https://get.anglofan.ru/s4wA1os">
+                <span class="pay__form--radio"></span>
+                <span class="pay__form--lvl">A1</span>
+              </label>
+              <label for="lvl_a2_os">
+                <input class="visually-hidden" type="radio" name="price4OsRadio" id="lvl_a2_os"
+                  value="https://get.anglofan.ru/s4wA2os">
+                <span class="pay__form--radio"></span>
+                <span class="pay__form--lvl">A2</span>
+              </label>
+              <label for="lvl_b1_os">
+                <input class="visually-hidden" type="radio" name="price4OsRadio" id="lvl_b1_os"
+                  value="https://get.anglofan.ru/s4wB1os">
+                <span class="pay__form--radio"></span>
+                <span class="pay__form--lvl">B1</span>
+              </label>
+            </div>
+            <button type="submit" id="telegramPrice4Os" class="pay__pay">Оплатить</button>
+          </form>
+        </div>
+
+        <div class="pay__discount">Скидка 26%</div>
       </div>
     </div>
   </section>
 
 
-section.you-result.
+  <section class="your-result sidebar">
+    <div class="your-result__wrap ">
+      <div>
+        <div class="widget js-sticky-widget"></div>
+        <h2 class="your-result__title">ВАШ РЕЗУЛЬТАТ</h2>
+      </div>
+
+      <ul class="your-result__list widget">
+        <li class="your-result__item">
+          <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+          <p class="your-result__text">Освоите полностью нужный уровень</p>
+        </li>
+        <li class="your-result__item">
+          <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+          <p class="your-result__text">Сможете самостоятельно путешествовать и свободно общаться с иностранцами</p>
+        </li>
+        <li class="your-result__item">
+          <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+          <p class="your-result__text">Начнёте уверенно разговаривать на разные темы</p>
+        </li>
+        <li class="your-result__item">
+          <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+          <p class="your-result__text">Расширите свой словарный запась</p>
+        </li>
+        <li class="your-result__item">
+          <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+          <p class="your-result__text">Проработаете произношение</p>
+        </li>
+        <li class="your-result__item">
+          <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+          <p class="your-result__text">Поймёте и запомните грамматику, которую раньше зубрили и не могли использовать в
+            речиь</p>
+        </li>
+        <li class="your-result__item">
+          <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+          <p class="your-result__text">Смените работу или получите повышение</p>
+        </li>
+        <li class="your-result__item">
+          <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+          <p class="your-result__text">Будете чувствовать себя свободно в путешествиях и экономить</p>
+        </li>
+        <li class="your-result__item">
+          <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+          <p class="your-result__text">Легко переедете в любую страну</p>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+
 
   <!-- ===== Запись на курс ===== -->
   <section class="how-sign">
@@ -689,7 +759,9 @@ section.you-result.
       </li>
     </ul>
   </section>
-
+  <section class="go-test">
+    <a href="../lvl-test/" class="go-test__link">ПРОЙТИ БЕСПЛАТНЫЙ ТЕСТ</a>
+  </section>
   <!-- ===== Программа ===== -->
 
   <section id="courseProgramm" class="programm section-menu">
@@ -882,7 +954,8 @@ section.you-result.
                 <div><b>&zwj;СРОК ОБУЧЕНИЯ - 37 недель (первая неделя бесплатная)</b></div>
                 <div>&nbsp;</div>
                 <div><b>СЕКРЕТЫ ОБУЧЕНИЯ</b></div>
-                <div>9 супер методик запоминания слов без зубрежки, запоминания грамматики без заучивания правил, тренировки понимания на слух, говорения и постановки произношения</div>
+                <div>9 супер методик запоминания слов без зубрежки, запоминания грамматики без заучивания правил,
+                  тренировки понимания на слух, говорения и постановки произношения</div>
               </div>
               <div>&nbsp;</div>
               <div><b>ГРАММАТИКА</b></div>
@@ -890,7 +963,8 @@ section.you-result.
               <div><b>Объясняю все очень простым языком (смотрите отзывы)</b></div>
               <div>1.&nbsp; &nbsp; &nbsp; All 5 types of questions&nbsp;</div>
               <div>2.&nbsp; &nbsp; &nbsp; Indirect questions</div>
-              <div>3.&nbsp; &nbsp; &nbsp; Plans for future (to be going to/ Present Continuous / Present Simple / Future Simple)&nbsp;</div>
+              <div>3.&nbsp; &nbsp; &nbsp; Plans for future (to be going to/ Present Continuous / Present Simple / Future
+                Simple)&nbsp;</div>
               <div>4.&nbsp; &nbsp; &nbsp; Present Perfect Continuous</div>
               <div>5.&nbsp; &nbsp; &nbsp; Future Perfect</div>
               <div>6.&nbsp; &nbsp; &nbsp; Past Perfect Continuous</div>
@@ -898,7 +972,8 @@ section.you-result.
               <div>8.&nbsp; &nbsp; &nbsp; Second conditional&nbsp;&nbsp;</div>
               <div>9.&nbsp; &nbsp; &nbsp; Third conditional&nbsp;</div>
               <div>10.&nbsp; &nbsp; &laquo;I wish&raquo; / &laquo;If only&raquo;&nbsp;</div>
-              <div>11.&nbsp; &nbsp; Modal verbs (can, could, must, mustn&#39;t, have to, to be able to, may, might, should)</div>
+              <div>11.&nbsp; &nbsp; Modal verbs (can, could, must, mustn&#39;t, have to, to be able to, may, might,
+                should)</div>
               <div>12.&nbsp; &nbsp; State verbs (verbs that can&#39;t be used in ing form)</div>
               <div>13.&nbsp; &nbsp; Passive voice in all Tenses</div>
               <div>14.&nbsp; &nbsp; Used to, to be used to, to get used to (feel the difference)</div>
@@ -942,34 +1017,35 @@ section.you-result.
       </div>
     </div>
   </section>
-  <section class="issue">
-    <div class="issue__qestion ask">
-      <button class="ask__btn" type="button" id="ask-toggle" aria-exp="false" aria-controls="ask-content">ЗАДАТЬ
-        ВОПРОС</button>
-      <ul class="ask__socail" id="ask-content" aria-visible="true" aria-labelledby="ask-toggle">
-        <li class="ask__icon">
-          <a href="https://www.instagram.com/anglofan/" class="ask__link" tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-              <use xlink:href="#color_Instagram"></use>
-            </svg></a></li>
-        <li class="ask__icon">
-          <a href="http://t.me/Anglofan_bot/start PAYLOAD" class="ask__link" tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-              <use xlink:href="#color_Telegram"></use>
-            </svg></a></li>
-        <li class="ask__icon">
-          <a href="https://wa.me/message/ZOTLZRZAUKVSI1" class="ask__link" tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-              <use xlink:href="#color_whatsapp"></use>
-            </svg></a></li>
-        <li class="ask__icon">
-          <a href="https://vk.me/anglofanru" class="ask__link" tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-              <use xlink:href="#color_VK"></use>
-            </svg></a></li>
-      </ul>
-    </div>
-  </section>
+  <div class="ask">
+    <button class="ask__btn" type="button" id="ask-toggle" aria-exp="false" aria-controls="ask-content">
+      <svg class="ask__btn--inline" width="30" height="30">
+      <use xlink:href="#message"></use>
+    </svg>
+  </button>
+    <ul class="ask__socail" id="ask-content" aria-visible="true" aria-labelledby="ask-toggle">
+      <li class="ask__icon">
+        <a href="https://www.instagram.com/anglofan/" class="ask__link"  tabindex="0">
+        <svg class="ask__link--inline" width="30" height="30">
+        <use xlink:href="#color_Instagram"></use>
+      </svg></a></li>
+      <li class="ask__icon">
+        <a href="http://t.me/Anglofan_bot/start PAYLOAD" class="ask__link"  tabindex="0">
+        <svg class="ask__link--inline" width="30" height="30">
+        <use xlink:href="#color_Telegram"></use>
+      </svg></a></li>
+      <li class="ask__icon">
+        <a href="https://wa.me/message/ZOTLZRZAUKVSI1" class="ask__link"  tabindex="0">
+        <svg class="ask__link--inline" width="30" height="30">
+        <use xlink:href="#color_whatsapp"></use>
+      </svg></a></li>
+      <li class="ask__icon">
+        <a href="https://vk.me/anglofanru" class="ask__link"  tabindex="0">
+        <svg class="ask__link--inline" width="30" height="30">
+        <use xlink:href="#color_VK"></use>
+      </svg></a></li>
+  </ul>
+  </div>
   <!-- Подключение footer -->
   <include src="build/@footer.html"> </include>
 
@@ -982,7 +1058,8 @@ section.you-result.
         <img src="/img/gift.svg" alt="Подарок" width="100" height="100" class="banner-modal__image">
         <h3 class="banner-modal__title">ВАШ ПОДАРОК</h3>
         <p class="banner-modal__text">ВСЕМ, КТО ЗАРЕГИСТРИРУЕТСЯ НА БЕСПЛАТНУЮ НЕДЕЛЮ в течение 30 минут</p>
-        <p class="banner-modal__info">Я ДАРЮ урок по песне Pretty woman и WORKBOOK по артиклям (обычная цена 590 руб)</p>
+        <p class="banner-modal__info">Я ДАРЮ урок по песне Pretty woman и WORKBOOK по артиклям (обычная цена 590 руб)
+        </p>
         <a href="https://get.anglofan.ru/registration__free/" class="three-day__link">ХОЧУ ПОДАРОК</a>
       </div>
     </div>
@@ -991,9 +1068,18 @@ section.you-result.
   <div class="visually-hidden">
     <include src="build/img/sprite.svg"></include>
   </div>
+    <!-- RELLAX JS -->
+    <script src="/js/rellax.min.js"></script>
+    <!-- STICKY -->
+    <script src="/js/sticksy.min.js"></script>
+  <!-- подключение слайдера -->
   <script src="/js/swiper-bundle.min.js"></script>
-  <script src="/js/smart.js"></script>
+  <!-- подключение общего скрипта -->
   <script src="/js/main.js"></script>
+  <!-- подключение частного скрипта -->
+  <script src="/js/smart.js"></script>
+
+
   <!-- <script src="/js/alt.js"></script> -->
   <!-- <script src="/js/test1.js"></script> -->
 </body>

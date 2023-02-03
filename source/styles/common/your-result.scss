@@ -8,15 +8,23 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
 }
 
 .your-result__item {
-  margin: 30px 0;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 9px;
+  background-color: var(--yellow3);
 }
 
+
 .your-result__image {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
 }
 
 .your-result__text {
@@ -28,19 +36,24 @@
     width: 1200px;
     margin: 0 auto;
   }
-
+.your-result__wrap{
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
   .your-result__title {
+    margin-top: 150px;
     text-align: center;
   }
 
   .your-result__list {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
     margin: 0 -20px;
   }
 
   .your-result__item {
-    width: calc(25% - 40px);
+    // width: calc(25% - 40px);
     margin: 10px 20px;
   }
 }

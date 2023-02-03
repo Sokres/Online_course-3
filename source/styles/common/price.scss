@@ -132,8 +132,6 @@
 .pay__lvl{
   display: flex;
   justify-content: center;
-  // margin-bottom: 40px;
-
   transition: box-shadow 1s ease-in-out;
 
   label{
@@ -179,6 +177,12 @@
   }
   .pay__form--lvl{
     padding-left: 10px;
+  }
+  .pay__form--disabled{
+    box-shadow: 0 0 0 2px var(--dark3);
+  }
+  .pay__form--disabled:hover{
+    box-shadow: 0 0 0 2px var(--yellow);
   }
 }
 .pay__place{

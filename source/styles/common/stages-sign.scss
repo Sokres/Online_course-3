@@ -38,12 +38,17 @@
     text-align: center;
   }
   .how-sign__wrap{
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 50px;
 
   }
   .how-sign__list{
     margin: 30px 10px;
+    width: calc(33.33% - 30px);
+  }
+  .stages-sign--lg{
+    width: calc(66.66% - 30px);
   }
   .how-sign__list:last-child.stages-sign__image{
     transform: rotate(0deg);

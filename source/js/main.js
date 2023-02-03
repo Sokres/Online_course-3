@@ -96,11 +96,13 @@ console.log('hello');
   let show = () => {
     askToggle.setAttribute('aria-expanded', true)
     askContent.setAttribute('aria-hidden', false)
+    askToggle.querySelector("use").setAttribute("href", "#close_message");
   }
 
   let hide = () => {
     askToggle.setAttribute('aria-expanded', false)
     askContent.setAttribute('aria-hidden', true)
+    askToggle.querySelector("use").setAttribute("href", "#message");
   }
 
   askToggle.addEventListener('click', event => {
@@ -135,8 +137,9 @@ console.log('hello');
 
 initAcc('.accordion__box', true);
 })();
-console.log('hello');
-// Оптимизация изображений Lazy loading
+//
+
+
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -201,6 +204,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
    }
 
  });
+
+
+/* подключение RELLAX JS */
+var rellax = new Rellax('.rellax', {
+  // wrapper:'.custom-element'
+});
+
 /* Настройки слайдера */
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
@@ -221,6 +231,8 @@ var swiper = new Swiper(".mySwiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  },
-  lazy: true,
+  }
+  // lazy: true,
 });
+
+Sticksy.initializeAll('.js-sticky-widget', { listen: true })

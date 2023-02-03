@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin-top: 50px;
+  margin-bottom: 50px;
   padding: 0 20px;
   min-height: 50vh;
 }
@@ -40,9 +41,24 @@
 /* Аватар */
 .main-page__avatar--pic {
   border-radius: 100%;
-  box-shadow: 15px -15px 0 1px var(--yellow);
+  // z-index: 10;
+  // box-shadow: 15px -15px 0 1px var(--yellow);
+}
+.main-page__avatar{
+  position: relative;
+  // z-index: 10;
 }
 
+.main-page__avatar--shadow{
+  position: absolute;
+  top: -30px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: var(--yellow);
+  z-index: -1;
+}
 /* Иконки социальных сетей */
 
 .social-icon {
@@ -130,61 +146,71 @@
 /* Кнопка ЗАДАТЬ ВОПРОС */
 
 .ask {
-  position: relative;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
   display: flex;
   justify-content: center;
-  // margin: 0 20px;
-  // filter: url(#goo);
+}
+.ask:hover{
+  animation: none;
 }
 
+
 .ask__btn {
-  @extend .btn;
-  @extend .shadow-link;
-  width: 100%;
-  max-width: 300px;
-  max-height: 60px;
-  border-radius: 9px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
   background-color: var(--yellow);
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
   font-weight: 500;
+  z-index: 100;
+  // color: var(--dark);
 }
 
 .ask__btn:hover {
-  background-color: var(--yellow3);
+  background-color: var(--yellow2);
 }
 
 .ask__socail {
   @extend .list-none;
   position: absolute;
-  top: 0;
+  bottom: 130px;
   left: 0;
   right: 0;
-  display: flex;
   justify-content: space-around;
   width: 100%;
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
-  transform: translateY(40px);
+  transform: translateY(80px);
 }
 
 .ask__icon {
-  position: absolute;
-  top: 0;
-  left: 50%;
+  width: auto;
+  // position: absolute;
+  // top: 0;
+  // left: 50%;
   display: block;
-  transform: translateX(-50%);
+  margin: 10px 10px;
+  // transform: translateX(-50%);
   transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
 }
-
+.ask__icon:hover {
+  transform: scale(1.1);
+}
 .ask__link {
   display: block;
-  width: 50px;
-  height: 50px;
-  border: 10px solid var(--white);
-  border-radius: 100%;
-  box-shadow: 0 0 0 2px var(--yellow);
+  width: 40px;
+  height: 40px;
+  // border: 10px solid var(--white);
+  // border-radius: 100%;
+  // box-shadow: 0 0 0 2px var(--yellow);
 }
 
 .ask__link--inline {
@@ -195,8 +221,8 @@
 /* Скрытие социальных кнопок */
 
 .ask__btn[aria-expanded="true"] {
-  box-shadow: 0 0 0 2px var(--blue);
-  background-color: var(--white);
+  // box-shadow: 0 0 0 2px var(--blue);
+  background-color: var(--yellow2);
 }
 
 .ask__socail[aria-hidden="false"] {
@@ -205,21 +231,21 @@
   transform: translateY(60px);
 
   // display: block;
-  .ask__icon:nth-child(1) {
-    transform: translateX(-270%);
-  }
+  // .ask__icon:nth-child(1) {
+  //   transform: translateX(-270%);
+  // }
 
-  .ask__icon:nth-child(2) {
-    transform: translateX(-130%) translateY(40px);
-  }
+  // .ask__icon:nth-child(2) {
+  //   transform: translateX(-130%) translateY(40px);
+  // }
 
-  .ask__icon:nth-child(3) {
-    transform: translateX(30%) translateY(40px);
-  }
+  // .ask__icon:nth-child(3) {
+  //   transform: translateX(30%) translateY(40px);
+  // }
 
-  .ask__icon:nth-child(4) {
-    transform: translateX(170%);
-  }
+  // .ask__icon:nth-child(4) {
+  //   transform: translateX(170%);
+  // }
 }
 
 /* ------------------ */
@@ -479,7 +505,7 @@
     min-width: 300px;
   }
 
-  .smart .about-eng__text {
+ .about-eng__text {
     width: 80%;
     line-height: 1.3;
     font-size: 26px;
@@ -524,9 +550,9 @@
     align-self: center;
   }
 
-  .about-eng__text {
-    font-size: 20px;
-  }
+  // .about-eng__text {
+  //   font-size: 20px;
+  // }
 
   .main-page__qestion {
     align-self: center;
@@ -554,8 +580,9 @@
 
 /* Стили для Starter */
 .about-eng__subtitle {
-  color: var(--yellow);
-  text-shadow: 1px 1px 1px var(--blue);
+  color: var(--blue3);
+  text-shadow: 2px 2px 2px var(--yellow);
+  // font-size: 36px;
 }
 
 /* стили для практического марафона */
@@ -566,10 +593,10 @@
   color: var(--yellow2);
 }
 
-.about-eng__text {
-  font-weight: 400;
-  color: var(--dark2);
-  font-size: 16px;
-}
+// .about-eng__text {
+//   font-weight: 400;
+//   color: var(--dark2);
+//   font-size: 16px;
+// }
 
 

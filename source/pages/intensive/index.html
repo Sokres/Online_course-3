@@ -82,12 +82,14 @@
         </svg></a>
 
     </div>
-    <picture class="main-page__avatar">
-      <source type="image/webp" width="390" height="390"
-        srcset="../img/webp/ava-int_x2.webp 2x, ../img/webp/ava-int_x1.webp 1x">
-      <img class="main-page__avatar--pic" width="390" height="390" src="../img/ava-int_x1.jpg"
-        srcset="../img/ava-int_x2.jpg 2x, ../img/ava-int_x1.jpg 1x" alt="Фото Карины">
-    </picture>
+    <div class="main-page__avatar rellax" data-rellax-speed="-1">
+      <div class="main-page__avatar--shadow rellax" data-rellax-speed="-1" ></div>
+      <picture class="main-page__avatar--wrap">
+        <source type="image/webp" width="390" srcset="../img/webp/ava-smart_x2.webp 2x, ../img/webp/ava-smart_x1.webp 1x">
+        <img class="main-page__avatar--pic" width="390" src="../img/ava-smart_x1.jpg"
+        srcset="../img/ava-smart_x2.jpg 2x, ../img/ava-smart_x1.jpg 1x" alt="Фото Карины">
+      </picture>
+    </div>
 
     <div class="main-page__content about-eng">
       <h2 class="about-eng__title">INTENSIVE</h2>
@@ -166,6 +168,7 @@
   <section class="edge">
     <h2 class="edge__title"> ПРЕИМУЩЕСТВА</h2>
     <div class="edge__wrap-title">
+      <div class="widget js-sticky-widget"></div>
       <h3 class="edge__subtitle">Intensive - системный и комплексный курс, разработанный в соответствии с высочайшими
         международными стандартами</h3>
       <!-- <h3 class="edge__subtitle">В курсе используется много современных источников: YouTube, песни, сериалы, фильмы,
@@ -395,20 +398,20 @@
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-int__1.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-int__1.jpg" />
+
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-int__2.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-int__2.jpg" />
+
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-int__3.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-int__3.jpg" />
+
           </div>
           <div class="swiper-slide">
-            <img data-src="../img/feadback/feadback-int__4.jpg" class="swiper-lazy" />
-            <div class="swiper-lazy-preloader"></div>
+            <img src="../img/feadback/feadback-int__4.jpg" />
+
           </div>
 
 
@@ -431,9 +434,9 @@
         <p class="pay__learn">12 недель (36 уроков) <br> <span>3 месяца дополнительного доступа к курсу</span> </p>
         <div class="pay__cost">
           <!-- <span>12 900₽</span> -->
-          13 900₽</div>
+          20 900₽</div>
         <div class="pay__up">
-           <span>11 900₽</span> для всех наших студентов (тех, кто учился на любом другом курсе)
+           <!-- <span>11 900₽</span> для всех наших студентов (тех, кто учился на любом другом курсе) -->
         </div>
         <ul class="pay__advantage">
           <li class="pay__advantage-item pay__advantage-item--dot">удобная обучающая платформа (через телефон, компьютер или любое другое устройство)</li>
@@ -441,7 +444,7 @@
           <li class="pay__advantage-item pay__advantage-item--dot">дополнительные материалы: чек-листы, списки слов и инструкции по изучению английского</li>
           <li class="pay__advantage-item pay__advantage-item--dot">3 вебинара (в записи) с Кариной (после 1, 6 и 11 недель)</li>
           <li class="pay__advantage-item pay__advantage-item--dot">сертификат об окончании курсов в электронном виде</li>
-          <li class="pay__advantage-item pay__advantage-item--dot">🎁 4 недели Speaking club в подарок, если проходите все 36 уроков за 18 недель (это всего 2 урока в неделю)</li>
+          <!-- <li class="pay__advantage-item pay__advantage-item--dot">🎁 4 недели Speaking club в подарок, если проходите все 36 уроков за 18 недель (это всего 2 урока в неделю)</li> -->
           <li class="pay__advantage-item pay__advantage-item--dot">самопроверка по очень подробным ответам в следующем уроке с объяснением каждого задания (без проверки преподавателя)</li>
         </ul>
         <p class="pay__info-start">обучение начинается в ближайший понедельник после полной оплаты или внесения первого платежа. Если вы оплатили в понедельник, то обучение начнется через 7 дней (в следующий понедельник)</span> </p>
@@ -461,11 +464,11 @@
               <span class="pay__form--radio"></span>
               <span class="pay__form--lvl">A2</span>
             </label>
-            <!-- <label for="lvl_b1_s">
-              <input class="visually-hidden" type="radio" name="price_lvl_s" id="lvl_b1_s" value="lvl_b1_s">
-              <span class="pay__form--radio"></span>
+            <label for="lvl_b1_s ">
+              <input disabled class="visually-hidden" type="radio" name="price_lvl_s" id="lvl_b1_s" value="lvl_b1_s">
+              <span class="pay__form--radio pay__form--disabled"></span>
               <span class="pay__form--lvl">B1</span>
-            </label> -->
+            </label>
           </form>
         </div>
         <button id="btnPricePayS" class="btn-modal pay__pay" data-modal="choice">Оплатить</button>
@@ -495,11 +498,12 @@
 
           <li class="pay__advantage-item pay__advantage-item--tick">проверка домашних заданий Кариной не только во время курса (пока выходят уроки), но и 90 дней после его окончания (вы можете заниматься полностью в своем темпе)</li>
 
-          <li class="pay__advantage-item pay__advantage-item--tick">6 недель Speaking club. 1 раз в неделю обратная связь от Карины по всему, что вы наговорили за неделю и персональные рекомендации по улучшению произношения и изучению грамматики</li>
+          <!-- <li class="pay__advantage-item pay__advantage-item--tick">6 недель Speaking club. 1 раз в неделю обратная связь от Карины по всему, что вы наговорили за неделю и персональные рекомендации по улучшению произношения и изучению грамматики</li> -->
           <li class="pay__advantage-item pay__advantage-item--tick">индивидуальный чат с Кариной, полное сопровождение и всесторонняя поддержка</li>
-          <li class="pay__advantage-item pay__advantage-item--tick">курс по произношению</li>
+          <!-- <li class="pay__advantage-item pay__advantage-item--tick">курс по произношению</li> -->
           <li class="pay__advantage-item pay__advantage-item--tick">2 индивидуальные консультации с Кариной по 45 мин (домашние задания проверяются отдельно, не на консультациях) </li>
-          <li class="pay__advantage-item pay__advantage-item--tick">разработка персонального плана обучения после окончания курса на 3 месяца полностью индивидуальная работа и персональные рекомендации, исходя из особенностей вашего восприятия, способностей к обучению и возникающих сложностей  </li>
+          <li class="pay__advantage-item pay__advantage-item--tick">разработка персонального плана обучения после окончания курса на 3 месяца   </li>
+          <li class="pay__advantage-item pay__advantage-item--tick">полностью индивидуальная работа и персональные рекомендации, исходя из особенностей вашего восприятия, способностей к обучению и возникающих сложностей  </li>
         </ul>
         <p class="pay__info-start">обучение начинается в ближайший понедельник после полной оплаты или внесения первого платежа. Если вы оплатили в понедельник, то обучение начнется через 7 дней (в следующий понедельник)</p>
 
@@ -519,10 +523,10 @@
               <input class="visually-hidden" type="radio" name="price_lvl_xl" id="lvl_a2_xl" value="lvl_a2_xl">
               <span class="pay__form--radio"></span>
               <span class="pay__form--lvl">A2</span></label>
-            <!-- <label for="lvl_b1_xl">
-              <input class="visually-hidden" type="radio" name="price_lvl_xl" id="lvl_b1_xl" value="lvl_b1_xl">
-              <span class="pay__form--radio"></span>
-              <span class="pay__form--lvl">B1</span></label> -->
+            <label for="lvl_b1_xl">
+              <input disabled class="visually-hidden" type="radio" name="price_lvl_xl" id="lvl_b1_xl" value="lvl_b1_xl">
+              <span class="pay__form--radio pay__form--disabled"></span>
+              <span class="pay__form--lvl">B1</span></label>
           </form>
         </div>
         <button data-modal="choice" id="btnPricePayXL" class="btn-modal pay__pay">Оплатить</button>
@@ -543,7 +547,7 @@
         <img src="../img/arrow-then.svg" alt="стрелка далее" width="50" height="50" class="stages-sign__image">
         <p class="stages-sign__text">Оплатите один из 2 тарифов, выбрав уровень или напишите нам запрос на рассрочку <a class="btn-modal link-info" data-modal="credit" >здесь</a> </p>
       </li>
-      <li class="how-sign__list stages-sign">
+      <li class="how-sign__list stages-sign stages-sign--lg">
         <img src="../img/arrow-then.svg" alt="стрелка далее" width="50" height="50" class="stages-sign__image">
         <p class="stages-sign__text">Eсли не знаете уровень, пройдите <a href="../lvl-test/">тест</a>. Чтобы точно
           определиться с уровнем, посмотрите программу каждого уровня (внизу этой страницы). <br>
@@ -821,34 +825,35 @@
   </section>
 
 
-  <section class="issue">
-    <div class="issue__qestion ask">
-      <button class="ask__btn" type="button" id="ask-toggle" aria-exp="false" aria-controls="ask-content">ЗАДАТЬ
-        ВОПРОС</button>
-      <ul class="ask__socail" id="ask-content" aria-visible="true" aria-labelledby="ask-toggle">
-        <li class="ask__icon">
-          <a href="https://www.instagram.com/anglofan/" class="ask__link" tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-              <use xlink:href="#color_Instagram"></use>
-            </svg></a></li>
-        <li class="ask__icon">
-          <a href="http://t.me/Anglofan_bot/start PAYLOAD" class="ask__link" tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-              <use xlink:href="#color_Telegram"></use>
-            </svg></a></li>
-        <li class="ask__icon">
-          <a href="https://wa.me/message/ZOTLZRZAUKVSI1" class="ask__link" tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-              <use xlink:href="#color_whatsapp"></use>
-            </svg></a></li>
-        <li class="ask__icon">
-          <a href="https://vk.me/anglofanru" class="ask__link" tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-              <use xlink:href="#color_VK"></use>
-            </svg></a></li>
-      </ul>
-    </div>
-  </section>
+ <div class="ask">
+  <button class="ask__btn" type="button" id="ask-toggle" aria-exp="false" aria-controls="ask-content">
+    <svg class="ask__btn--inline" width="30" height="30">
+    <use xlink:href="#message"></use>
+  </svg>
+</button>
+  <ul class="ask__socail" id="ask-content" aria-visible="true" aria-labelledby="ask-toggle">
+    <li class="ask__icon">
+      <a href="https://www.instagram.com/anglofan/" class="ask__link"  tabindex="0">
+      <svg class="ask__link--inline" width="30" height="30">
+      <use xlink:href="#color_Instagram"></use>
+    </svg></a></li>
+    <li class="ask__icon">
+      <a href="http://t.me/Anglofan_bot/start PAYLOAD" class="ask__link"  tabindex="0">
+      <svg class="ask__link--inline" width="30" height="30">
+      <use xlink:href="#color_Telegram"></use>
+    </svg></a></li>
+    <li class="ask__icon">
+      <a href="https://wa.me/message/ZOTLZRZAUKVSI1" class="ask__link"  tabindex="0">
+      <svg class="ask__link--inline" width="30" height="30">
+      <use xlink:href="#color_whatsapp"></use>
+    </svg></a></li>
+    <li class="ask__icon">
+      <a href="https://vk.me/anglofanru" class="ask__link"  tabindex="0">
+      <svg class="ask__link--inline" width="30" height="30">
+      <use xlink:href="#color_VK"></use>
+    </svg></a></li>
+</ul>
+</div>
 
   <!-- Подключение footer -->
   <include src="build/@footer.html"> </include>
@@ -1412,6 +1417,10 @@
   <div class="visually-hidden">
     <include src="build/img/sprite.svg"></include>
   </div>
+      <!-- RELLAX JS -->
+      <script src="/js/rellax.min.js"></script>
+     <!-- STICKY -->
+     <script src="/js/sticksy.min.js"></script>
   <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/intensive.js"></script>

@@ -79,18 +79,14 @@
             class="social-icon--inline" width="30" height="30">
             <use xlink:href="#vk-line"></use>
           </svg></a>
-        <a class="social-icon__link" href="https://www.facebook.com/anglofanru" title="Ссылка на Facebook"
-          target="_blank"><svg class="social-icon--inline" width="30" height="30">
-            <use xlink:href="#facebook-line"></use>
-          </svg></a>
       </div>
-      <picture class="main-page__avatar">
+      <div class="main-page__avatar">
+        <div class="main-page__avatar--shadow rellax" data-rellax-speed="-1" ></div>
         <source type="image/webp" width="390" height="390"
           srcset="../img/webp/ava-speak_x2.webp 2x, ../img/webp/ava-speak_x1.webp 1x">
         <img class="main-page__avatar--pic" width="390" height="390" src="../img/ava-speak_x1.jpg"
           srcset="../img/ava-speak_x2.jpg 2x, ../img/ava-speak_x1.jpg 1x" alt="Фото Карины">
-      </picture>
-
+      </div>
       <div class="main-page__content about-eng">
         <h2 class="about-eng__title">SPEAKING CLUB</h2>
         <p class="about-eng__text">говори, сколько хочешь, когда тебе удобно</p>
@@ -300,56 +296,58 @@
 
       </ul>
     </section>
-
     <section class="your-result">
-      <h2 class="your-result__title">ВАШ РЕЗУЛЬТАТ</h2>
-      <ul class="your-result__list">
-        <li class="your-result__item">
-          <img src="../img/baloun.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
-          <p class="your-result__text">забудете о языковом барьере навсегда</p>
-        </li>
-        <li class="your-result__item">
-          <img src="../img/baloun.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
-          <p class="your-result__text">улучшите произношение</p>
-        </li>
-        <li class="your-result__item">
-          <img src="../img/baloun.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
-          <p class="your-result__text">научитесь понимать разные акценты</p>
-        </li>
-        <li class="your-result__item">
-          <img src="../img/baloun.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
-          <p class="your-result__text">введете английский в свою жизнь</p>
-        </li>
-      </ul>
+      <div class="your-result__wrap">
+  <h2 class="your-result__title">ВАШ РЕЗУЛЬТАТ</h2>
+  <ul class="your-result__list">
+    <li class="your-result__item">
+      <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+      <p class="your-result__text">забудете о языковом барьере навсегда</p>
+    </li>
+    <li class="your-result__item">
+      <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+      <p class="your-result__text">улучшите произношение</p>
+    </li>
+    <li class="your-result__item">
+      <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+      <p class="your-result__text">научитесь понимать разные акценты</p>
+    </li>
+    <li class="your-result__item">
+      <img src="../img/ok-circle.svg" width="30" height="30" alt="Воздушный шарик" class="your-result__image">
+      <p class="your-result__text">введете английский в свою жизнь</p>
+    </li>
+  </ul>
+</div>
     </section>
-    <section class="issue">
-      <div class="issue__qestion ask">
-        <button class="ask__btn" type="button" id="ask-toggle" aria-exp="false" aria-controls="ask-content">ЗАДАТЬ
-          ВОПРОС</button>
-        <ul class="ask__socail" id="ask-content" aria-visible="true" aria-labelledby="ask-toggle">
-          <li class="ask__icon">
-            <a href="https://www.instagram.com/anglofan/" class="ask__link"  tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-            <use xlink:href="#color_Instagram"></use>
-          </svg></a></li>
-          <li class="ask__icon">
-            <a href="http://t.me/Anglofan_bot/start PAYLOAD" class="ask__link"  tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-            <use xlink:href="#color_Telegram"></use>
-          </svg></a></li>
-          <li class="ask__icon">
-            <a href="https://wa.me/message/ZOTLZRZAUKVSI1" class="ask__link"  tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-            <use xlink:href="#color_whatsapp"></use>
-          </svg></a></li>
-          <li class="ask__icon">
-            <a href="https://vk.me/anglofanru" class="ask__link"  tabindex="0">
-            <svg class="ask__link--inline" width="30" height="30">
-            <use xlink:href="#color_VK"></use>
-          </svg></a></li>
-        </ul>
-      </div>
-    </section>
+    <div class="ask">
+      <button class="ask__btn" type="button" id="ask-toggle" aria-exp="false" aria-controls="ask-content">
+        <svg class="ask__btn--inline" width="30" height="30">
+        <use xlink:href="#message"></use>
+      </svg>
+    </button>
+      <ul class="ask__socail" id="ask-content" aria-visible="true" aria-labelledby="ask-toggle">
+        <li class="ask__icon">
+          <a href="https://www.instagram.com/anglofan/" class="ask__link"  tabindex="0">
+          <svg class="ask__link--inline" width="30" height="30">
+          <use xlink:href="#color_Instagram"></use>
+        </svg></a></li>
+        <li class="ask__icon">
+          <a href="http://t.me/Anglofan_bot/start PAYLOAD" class="ask__link"  tabindex="0">
+          <svg class="ask__link--inline" width="30" height="30">
+          <use xlink:href="#color_Telegram"></use>
+        </svg></a></li>
+        <li class="ask__icon">
+          <a href="https://wa.me/message/ZOTLZRZAUKVSI1" class="ask__link"  tabindex="0">
+          <svg class="ask__link--inline" width="30" height="30">
+          <use xlink:href="#color_whatsapp"></use>
+        </svg></a></li>
+        <li class="ask__icon">
+          <a href="https://vk.me/anglofanru" class="ask__link"  tabindex="0">
+          <svg class="ask__link--inline" width="30" height="30">
+          <use xlink:href="#color_VK"></use>
+        </svg></a></li>
+    </ul>
+    </div>
     <!-- Подключение footer -->
     <include src="build/@footer.html"> </include>
 

@@ -158,9 +158,9 @@
 })();
 /* ---подсвечиваем пункты меню и скорлим в право--- */
 (function () {
-  var sectionss = document.querySelectorAll(".section-menu");
-  var navBtn = document.querySelectorAll(".sub-menu__btn");
-  var subMenu = document.querySelector(".sub-menu__wrap");
+  let sectionss = document.querySelectorAll(".section-menu");
+  let navBtn = document.querySelectorAll(".sub-menu__btn");
+  let subMenu = document.querySelector(".sub-menu__wrap");
 
   window.onscroll = () => {
     let current = "";
@@ -180,12 +180,10 @@
 
       li.classList.remove("sub-menu__btn--active")
       if (li.classList.contains(current)) {
-
         subMenu.scrollBy({
           left: 200
       });
-        li.classList.add("sub-menu__btn--active")
-
+        li.classList.add("sub-menu__btn--active");
       }
     });
   };
