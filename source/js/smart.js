@@ -114,6 +114,33 @@
       return false;
     }
   }
+})();
+(function () {
+  let forms = document.getElementById("formprice36Os");
+  let radio36Os = document.price36Os.price36OsRadio.length;
+
+  for (var i = 0; i < radio36Os; i++) {
+    document.price36Os.price36OsRadio[i].addEventListener('click',
+      function () {
+        forms.action = this.value;
+      }
+    )
+  }
+  // Проверка на пустоту
+
+  forms.onsubmit = function () {
+    let radioElems = document.getElementsByName('price36OsRadio');
+    let error = document.querySelector('#price36OsError');
+    let submit = false;
+    [].forEach.call(radioElems, function (item) {
+      item.checked && (submit = true);
+    });
+
+    if (!submit) {
+      error.style.display = 'block';
+      return false;
+    }
+  }
 
 })();
 /* ---активация навигации по странице--- */
