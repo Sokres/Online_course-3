@@ -13,7 +13,8 @@ module.exports = function minifyHTML() {
       include()
     ]))
     .pipe(htmlmin({
-        collapseWhitespace: true
+        collapseWhitespace: true,
+        removeComments: true
       }))
     // .pipe(htmlValidator())
     .pipe(gulp.dest("build/"));

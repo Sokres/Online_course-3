@@ -28,17 +28,66 @@
   window.addEventListener('scroll', stick)
 })();
 
+document.addEventListener('DOMContentLoaded', () => { //
+
+  const tabs = (tabsSelector, tabsHeadSelector, tabsBodySelector, tabsCaptionSelector, tabsCaptionActiveClass, tabsContentActiveClass) => {
+    const tabs = document.querySelector(tabsSelector)
+    const head = tabs.querySelector(tabsHeadSelector)
+    const body = tabs.querySelector(tabsBodySelector)
+
+    const getActiveTabName = () => {
+      return head.querySelector(`.${tabsCaptionActiveClass}`).dataset.tab
+    }
+
+    const setActiveContent = () => { // функция для
+      if (body.querySelector(`.${tabsContentActiveClass}`)) {
+        body.querySelector(`.${tabsContentActiveClass}`).classList.remove(tabsContentActiveClass) // то скрываем его
+      }
+      body.querySelector(`[data-tab=${getActiveTabName()}]`).classList.add(tabsContentActiveClass)
+    }
+
+
+    if (!head.querySelector(`.${tabsCaptionActiveClass}`)) {
+      head.querySelector(tabsCaptionSelector).classList.add(tabsCaptionActiveClass)
+    }
+
+    setActiveContent(getActiveTabName())
+
+    head.addEventListener('click', e => {
+      const caption = e.target.closest(tabsCaptionSelector)
+      if (!caption) return
+      if (caption.classList.contains(tabsCaptionActiveClass)) return
+      if (head.querySelector(`.${tabsCaptionActiveClass}`)) {
+        head.querySelector(`.${tabsCaptionActiveClass}`).classList.remove(tabsCaptionActiveClass)
+      }
+
+      caption.classList.add(tabsCaptionActiveClass)
+
+      setActiveContent(getActiveTabName())
+    })
+  }
+  tabs('.price__container--s', '.tabs__head', '.tabs__body', '.tabs__caption', 'tabs__caption_active', 'tabs__content_active')
+  tabs('.price__container--m', '.tabs__head', '.tabs__body', '.tabs__caption', 'tabs__caption_active', 'tabs__content_active')
+
+
+});
 
 
 (function () {
-  let forms = document.getElementById("formprice4Bs");
-  let radio4bs = document.price4Bs.price4BsRadio.length;
 
-  for (var i = 0; i < radio4bs; i++) {
-    document.price4Bs.price4BsRadio[i].addEventListener('click',
-      function () {
-        forms.action = this.value;
-      }
+
+
+  let forms = document.getElementById("formprice4Bs");
+  let radio4bstest = forms.querySelectorAll(".input-s4w");
+
+
+
+
+  for (var i = 0; i < radio4bstest.length; i++) {
+
+    radio4bstest[i].addEventListener('click', function () {
+      forms.action = this.value;
+    }
     )
   }
   // Проверка на пустоту
@@ -62,9 +111,31 @@
 
 (function () {
   let forms = document.getElementById("formprice36Bs");
-  let radio36bs = document.price36Bs.price36BsRadio.length;
+  let radio36bs = document.price36Bs.price36BsRadio;
+  let bs36S = document.querySelector("#bs36S");
 
-  for (var i = 0; i < radio36bs; i++) {
+  for (var i = 0; i < radio36bs.length; i++) {
+    bs36S.addEventListener('click', function () {
+      if (radio36bs[0].value == 'https://get.anglofan.ru/s36wA1') {
+        radio36bs[0].value = 'https://get.anglofan.ru/s36wA1__bs'
+        radio36bs[1].value = 'https://get.anglofan.ru/s36wA2__bs'
+        radio36bs[2].value = 'https://get.anglofan.ru/s36wB1__bs'
+        radio36bs[0].checked = false;
+        radio36bs[1].checked = false;
+        radio36bs[2].checked = false;
+        forms.action = '';
+      }
+      else {
+        radio36bs[0].value = 'https://get.anglofan.ru/s36wA1'
+        radio36bs[1].value = 'https://get.anglofan.ru/s36wA2'
+        radio36bs[2].value = 'https://get.anglofan.ru/s36wB1'
+        radio36bs[0].checked = false;
+        radio36bs[1].checked = false;
+        radio36bs[2].checked = false;
+        forms.action = '';
+        // radio4bstest[i].checked = false;
+      }
+    });
     document.price36Bs.price36BsRadio[i].addEventListener('click',
       function () {
         forms.action = this.value;
@@ -117,9 +188,30 @@
 })();
 (function () {
   let forms = document.getElementById("formprice36Os");
-  let radio36Os = document.price36Os.price36OsRadio.length;
-
-  for (var i = 0; i < radio36Os; i++) {
+  let radio36Os = document.price36Os.price36OsRadio;
+  let bs36M = document.querySelector("#bs36M");
+  for (var i = 0; i < radio36Os.length; i++) {
+    bs36M.addEventListener('click', function () {
+      if (radio36Os[0].value == 'https://get.anglofan.ru/s36wA1os') {
+        radio36Os[0].value = 'https://get.anglofan.ru/s36wA1os__bs'
+        radio36Os[1].value = 'https://get.anglofan.ru/s36wA2os__bs'
+        radio36Os[2].value = 'https://get.anglofan.ru/s36wB1os__bs'
+        radio36Os[0].checked = false;
+        radio36Os[1].checked = false;
+        radio36Os[2].checked = false;
+        forms.action = '';
+      }
+      else {
+        radio36Os[0].value = 'https://get.anglofan.ru/s36wA1os'
+        radio36Os[1].value = 'https://get.anglofan.ru/s36wA2os'
+        radio36Os[2].value = 'https://get.anglofan.ru/s36wB1os'
+        radio36Os[0].checked = false;
+        radio36Os[1].checked = false;
+        radio36Os[2].checked = false;
+        forms.action = '';
+        // radio4bstest[i].checked = false;
+      }
+    });
     document.price36Os.price36OsRadio[i].addEventListener('click',
       function () {
         forms.action = this.value;
@@ -135,13 +227,62 @@
     [].forEach.call(radioElems, function (item) {
       item.checked && (submit = true);
     });
-
+    console.log('hello');
     if (!submit) {
       error.style.display = 'block';
       return false;
     }
   }
 
+})();
+(function () {
+  let forms = document.getElementById("formpriceXL");
+  let radioXL = document.priceXL.priceXLRadio;
+  let bsXl = document.querySelector("#bsXl");
+
+  for (var i = 0; i < radioXL.length; i++) {
+    bsXl.addEventListener('click', function () {
+      if (radioXL[0].value == 'https://get.anglofan.ru/XLA1') {
+        radioXL[0].value = 'https://get.anglofan.ru/XLA1__bs'
+        radioXL[1].value = 'https://get.anglofan.ru/XLA2__bs'
+        radioXL[2].value = 'https://get.anglofan.ru/XLA1__bs'
+        radioXL[0].checked = false;
+        radioXL[1].checked = false;
+        radioXL[2].checked = false;
+        forms.action = '';
+      }
+      else {
+        radioXL[0].value = 'https://get.anglofan.ru/XLA1os'
+        radioXL[1].value = 'https://get.anglofan.ru/XLA2os'
+        radioXL[2].value = 'https://get.anglofan.ru/XLA1os'
+        radioXL[0].checked = false;
+        radioXL[1].checked = false;
+        radioXL[2].checked = false;
+        forms.action = '';
+        // radio4bstest[i].checked = false;
+      }
+    });
+    document.priceXL.priceXLRadio[i].addEventListener('click',
+      function () {
+        forms.action = this.value;
+      }
+    )
+  }
+  // Проверка на пустоту
+
+  forms.onsubmit = function () {
+    let radioElems = document.getElementsByName('priceXLRadio');
+    let error = document.querySelector('#priceXLError');
+    let submit = false;
+    [].forEach.call(radioElems, function (item) {
+      item.checked && (submit = true);
+    });
+
+    if (!submit) {
+      error.style.display = 'block';
+      return false;
+    }
+  }
 })();
 /* ---активация навигации по странице--- */
 (function () {
@@ -164,24 +305,24 @@
 })();
 
 /* ---навигация по якорным ссылкам--- */
-(function(){
+(function () {
   document.querySelectorAll(".nav-scrollBy[href^='#']").forEach(link => {
     link.addEventListener("click", function (e) {
-        e.preventDefault();
-        let href = this.getAttribute("href").substring(1);
-        const scrollTarget = document.getElementById(href);
-        const topOffset = document.querySelector(".sub-menu").offsetHeight;
-        // const topOffset = 0;
-        // если не нужен отступ сверху
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - topOffset;
+      e.preventDefault();
+      let href = this.getAttribute("href").substring(1);
+      const scrollTarget = document.getElementById(href);
+      const topOffset = document.querySelector(".sub-menu").offsetHeight;
+      // const topOffset = 0;
+      // если не нужен отступ сверху
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
 
-        window.scrollBy({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
+      window.scrollBy({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     });
-});
+  });
 })();
 /* ---подсвечиваем пункты меню и скорлим в право--- */
 (function () {
@@ -203,19 +344,19 @@
     navBtn.forEach((li) => {
       subMenu.scrollBy({
         left: -200
-    });
+      });
 
       li.classList.remove("sub-menu__btn--active")
       if (li.classList.contains(current)) {
         subMenu.scrollBy({
           left: 200
-      });
+        });
         li.classList.add("sub-menu__btn--active");
       }
     });
   };
 
-}) ();
+})();
 /* (function(){
   var section = document.querySelectorAll(".section-menu");
   var sections = {};
