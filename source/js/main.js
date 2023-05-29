@@ -88,7 +88,6 @@
   window.addEventListener('click', handleClosure)
   window.addEventListener('focusin', handleClosure)
 })();
-console.log('hello');
 (function(){
   let askToggle = document.getElementById('ask-toggle')
   let askContent = document.getElementById('ask-content')
