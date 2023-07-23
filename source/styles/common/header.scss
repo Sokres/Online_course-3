@@ -90,7 +90,7 @@
 }
 .menu__button:hover,
 .menu__button:focus{
-  color: var(--yellow2);
+  color: var(--turquoise2);
   outline: none;
 }
 .menu__button:hover::before,
@@ -100,8 +100,8 @@
 }
 // }
 // .menu__button:active::before{
-//   border-left: 2px solid var(--yellow2);
-//   border-bottom: 2px solid var(--yellow2);
+//   border-left: 2px solid var(--turquoise2);
+//   border-bottom: 2px solid var(--turquoise2);
 // }
 .header-page.menu__button[aria-expanded="true"]::before{
   transform: rotate(-45deg);
@@ -176,11 +176,11 @@
   }
 }
 .menu__button[aria-expanded="true"]{
-  color: var(--yellow2);
+  color: var(--turquoise2);
   border-bottom: 2px solid var(--blue);
   &::before{
-    border-left: 2px solid var(--yellow2);
-    border-bottom: 2px solid var(--yellow2);
+    border-left: 2px solid var(--turquoise2);
+    border-bottom: 2px solid var(--turquoise2);
   }
 }
 .menu__button[aria-expanded="true"]{
@@ -268,13 +268,13 @@
    /* Скрытое меню */
 
   .menu__button[aria-expanded="true"]{
-    box-shadow: 0 0 0 1px var(--yellow),
+    box-shadow: 0 0 0 1px var(--blue3),
     0px 3px 5px 1px rgba(34, 60, 80, 0.2);
-    color: var(--yellow2);
+    color: var(--blue3);
     &::before{
       margin-top: 0;
-      border-left: 2px solid var(--yellow2);
-      border-bottom: 2px solid var(--yellow2);
+      border-left: 2px solid var(--blue3);
+      border-bottom: 2px solid var(--blue3);
     }
   }
 }

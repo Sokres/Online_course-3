@@ -20,7 +20,7 @@
 .test-main__link{
   display: inline-block;
   padding: 0.7em 1.5em;
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
   border-radius: 10px;
   box-shadow: 0 0 0 2px var(--balck);
   color: var(--balck);
@@ -35,11 +35,11 @@
   transition: all 0.3s ease-in-out;
 }
 .test-main__link:hover{
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
 }
 .test-main__link:focus{
   background-color: var(--balck);
-  color: var(--yellow);
+  color: var(--turquoise);
 }
 .test-advantage{
   margin-top: 20px;
@@ -82,7 +82,7 @@
   height: 40px;
   text-align: center;
   color: #fff;
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
   border-radius: 10px;
 }
 .test-advantage__image{
@@ -95,7 +95,7 @@
   display: block;
   max-width: 350px;
   padding: 0.5em 1.5em;
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
   border-radius: 10px;
   box-shadow: 0 0 0 2px var(--balck);
   color: var(--balck);
@@ -113,11 +113,11 @@
 }
 .test-advantage__link:hover{
   background-color: var(--balck);
-  color: var(--yellow);
-  box-shadow: 0 0 0 2px var(--yellow);
+  color: var(--turquoise);
+  box-shadow: 0 0 0 2px var(--turquoise);
 }
 .test-advantage__link:focus{
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
   color: var(--balck);
   box-shadow: 0 0 0 2px var(--balck);
 }
@@ -136,7 +136,7 @@
   max-width: 300px;
   padding: 10px 26px;
   border-radius: 9px;
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
   text-align: center;
   font-weight: 500;
   color: var(--black);
@@ -145,17 +145,17 @@
 }
 .your-choice__link:hover,
 .your-choice__link:focus{
-  background-color: var(--yellow2);
+  background-color: var(--turquoise2);
 }
 .quest-link{
   display: inline-block;
-  color: var(--yellow);
+  color: var(--turquoise);
   font-size: 20px;
   text-decoration: none;
 }
 .quest-link:hover,
 .quest-link:focus{
-  color: var(--yellow2);
+  color: var(--turquoise2);
 }
 @media(min-width: 576px){
   .test-advantage__item{
@@ -270,7 +270,7 @@
 	width: 90%;
 	border: 0;
   border-radius: 10px;
-	background: var(--yellow);
+	background: var(--turquoise);
 	font-size: 16px;
 	cursor: pointer;
   transition: all 0.1s ease-in-out;

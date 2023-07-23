@@ -1,70 +1,71 @@
- /* Модальное окно */
- (function(){
+/* Модальное окно */
 
-  document.addEventListener('DOMContentLoaded', function() {
 
-    var modalButtons = document.querySelectorAll('.btn-modal'),
-        overlay      = document.querySelector('.modal-js-overlay'),
-        closeButtons = document.querySelectorAll('.modal-js-close');
+document.addEventListener('DOMContentLoaded', function () {
+  const modalButtons = document.querySelectorAll('.btn-modal');
+  const overlay = document.querySelector('.modal-js-overlay');
+  const closeButtons = document.querySelectorAll('.modal-js-close');
 
-    modalButtons.forEach(function(item){
+  if (modalButtons && overlay) {
+    modalButtons.forEach(function (item) {
 
-       item.addEventListener('click', function(e) {
+      item.addEventListener('click', function (e) {
 
-          e.preventDefault();
+        e.preventDefault();
 
-          var modalId = this.getAttribute('data-modal'),
-              modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
-              modalElem.classList.add('modal--active');
-              overlay.classList.add('modal--active');
-       });
+        let modalId = this.getAttribute('data-modal');
+        let modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+        modalElem.classList.add('modal--active');
+        overlay.classList.add('modal--active');
+      });
     });
 
 
-    closeButtons.forEach(function(item){
+    closeButtons.forEach(function (item) {
 
-       item.addEventListener('click', function(e) {
-          var parentModal = this.closest('.modal');
+      item.addEventListener('click', function (e) {
+        let parentModal = this.closest('.modal');
 
-          parentModal.classList.remove('modal--active');
-          overlay.classList.remove('modal--active');
-       });
+        parentModal.classList.remove('modal--active');
+        overlay.classList.remove('modal--active');
+      });
 
     });
 
-     document.body.addEventListener('keyup', function (e) {
-         var key = e.keyCode;
+    document.body.addEventListener('keyup', function (e) {
+      let key = e.keyCode;
 
-         if (key == 27) {
+      if (key == 27) {
 
-             document.querySelector('.modal.modal--active').classList.remove('modal--active');
-             document.querySelector('.modal-overlay').classList.remove('modal--active');
-         };
-     }, false);
+        document.querySelector('.modal.modal--active').classList.remove('modal--active');
+        document.querySelector('.modal-overlay').classList.remove('modal--active');
+      };
+    }, false);
 
-     overlay.addEventListener('click', function() {
-          document.querySelector('.modal.modal--active').classList.remove('modal--active');
-         this.classList.remove('modal--active');
-     });
-     /* отыкрытие модального окна по счетчику */
+    overlay.addEventListener('click', function () {
+      document.querySelector('.modal.modal--active').classList.remove('modal--active');
+      this.classList.remove('modal--active');
+    });
+    /* отыкрытие модального окна по счетчику */
 
-/*      function modalTimesUp(){
-      var modalTime = document.querySelector('.modal[data-modal="timeModal"]');
-      modalTime.classList.add('modal--active');
-            overlay.classList.add('modal--active');
-    };
-    setTimeout(modalTimesUp, 30); */
+    /*      function modalTimesUp(){
+          var modalTime = document.querySelector('.modal[data-modal="timeModal"]');
+          modalTime.classList.add('modal--active');
+                overlay.classList.add('modal--active');
+        };
+        setTimeout(modalTimesUp, 30); */
 
     /* ---------- */
-  });
+  };
+});
 
-  })();
+
 
 
 
 /* кнопка связи в соц сетях */
 
-(function(){
+(function () {
   let toggle = document.getElementById('nav-toggle')
   let content = document.getElementById('nav-content')
 
@@ -88,7 +89,7 @@
   window.addEventListener('click', handleClosure)
   window.addEventListener('focusin', handleClosure)
 })();
-(function(){
+(function () {
   let askToggle = document.getElementById('ask-toggle')
   let askContent = document.getElementById('ask-content')
 
@@ -114,73 +115,73 @@
   window.addEventListener('click', handleClosure)
   window.addEventListener('focusin', handleClosure)
 })();
-(function(){
-  function initAcc(elem, option){
+(function () {
+  function initAcc(elem, option) {
     document.addEventListener('click', function (e) {
-        if (!e.target.matches(elem+' .accordion__btn')) return;
-        else{
-            if(!e.target.parentElement.classList.contains('accordion__container--active')){
-                if(option==true){
-                    var elementList = document.querySelectorAll(elem+' .accordion__container');
-                    Array.prototype.forEach.call(elementList, function (e) {
-                        e.classList.remove('accordion__container--active');
-                    });
-                }
-                e.target.parentElement.classList.add('accordion__container--active');
-            }else{
-                e.target.parentElement.classList.remove('accordion__container--active');
-            }
+      if (!e.target.matches(elem + ' .accordion__btn')) return;
+      else {
+        if (!e.target.parentElement.classList.contains('accordion__container--active')) {
+          if (option == true) {
+            var elementList = document.querySelectorAll(elem + ' .accordion__container');
+            Array.prototype.forEach.call(elementList, function (e) {
+              e.classList.remove('accordion__container--active');
+            });
+          }
+          e.target.parentElement.classList.add('accordion__container--active');
+        } else {
+          e.target.parentElement.classList.remove('accordion__container--active');
         }
+      }
     });
-}
+  }
 
-initAcc('.accordion__box', true);
+  initAcc('.accordion__box', true);
 })();
 //
 
 
 
 
-document.addEventListener("DOMContentLoaded", function(event) {
-  var lazyImages =[].slice.call(
-   document.querySelectorAll(".lazy > source")
+document.addEventListener("DOMContentLoaded", function (event) {
+  var lazyImages = [].slice.call(
+    document.querySelectorAll(".lazy > source")
   )
 
   if ("IntersectionObserver" in window && 'IntersectionObserverEntry' in window) {
-     let lazyImageObserver =
-      new IntersectionObserver(function(entries, observer) {
-         entries.forEach(function(entry) {
+    let lazyImageObserver =
+      new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-             let lazyImage = entry.target;
-             lazyImage.srcset = lazyImage.dataset.srcset;
-             lazyImage.nextElementSibling.srcset = lazyImage.dataset.srcset;
-             lazyImage.nextElementSibling.classList.add('fade-in');
-             lazyImage.parentElement.classList.remove("lazy");
+            let lazyImage = entry.target;
+            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.nextElementSibling.srcset = lazyImage.dataset.srcset;
+            lazyImage.nextElementSibling.classList.add('fade-in');
+            lazyImage.parentElement.classList.remove("lazy");
             lazyImageObserver.unobserve(lazyImage);
-           }
+          }
         });
-       });
+      });
 
-     lazyImages.forEach(function(lazyImage) {
+    lazyImages.forEach(function (lazyImage) {
       lazyImageObserver.observe(lazyImage);
-     });
+    });
   } else {
 
     // Not supported, load all images immediately
     let active = false;
 
-    const lazyLoad = function() {
+    const lazyLoad = function () {
       if (active === false) {
         active = true;
-        setTimeout(function() {
-          lazyImages.forEach(function(lazyImage) {
+        setTimeout(function () {
+          lazyImages.forEach(function (lazyImage) {
             if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
               lazyImage.srcset = lazyImage.dataset.srcset;
               lazyImage.nextElementSibling.src = lazyImage.dataset.srcset;
               lazyImage.nextElementSibling.classList.add('fade-in');
               lazyImage.parentElement.classList.remove("lazy");
 
-              lazyImages = lazyImages.filter(function(image) {
+              lazyImages = lazyImages.filter(function (image) {
                 return image !== lazyImage;
               });
 
@@ -200,9 +201,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.addEventListener("scroll", lazyLoad);
     window.addEventListener("resize", lazyLoad);
     window.addEventListener("orientationchange", lazyLoad);
-   }
+  }
 
- });
+});
 
 
 /* подключение RELLAX JS */

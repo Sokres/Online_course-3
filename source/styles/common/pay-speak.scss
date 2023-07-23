@@ -27,7 +27,7 @@
   // padding: 20px;
   border-radius: 12px;
   box-shadow: 3px 2px 13px 0px rgba(50, 50, 50, 0.75);
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
 }
 
 .price-sc__title {
@@ -72,14 +72,14 @@
 }
 
 .price-sc__btn.--active {
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
 
   .price-sc__radio {
     background-color: var(--white);
   }
 
   .price-sc__radio::after {
-    background-color: var(--yellow);
+    background-color: var(--turquoise);
   }
 
   .price-sc__week {
@@ -95,7 +95,7 @@
   height: 20px;
   margin-right: 15px;
   border-radius: 100%;
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
   pointer-events: none;
 }
 
@@ -152,7 +152,7 @@
   padding: .5em 2em;
   margin: 10px;
   border-radius: 50px;
-  box-shadow: 0 0 0 2px var(--yellow);
+  box-shadow: 0 0 0 2px var(--turquoise);
   background-color: var(--white);
   color: var(--black);
   font-size: 18px;
@@ -165,14 +165,14 @@
 }
 
 .price-sc__pay:hover {
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
   box-shadow: 0 0 0 2px var(--white);
   color: var(--white);
   transition: all 0.3s ease-in;
 }
 
 .price-sc__pay:focus {
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
   box-shadow: 0 0 0 2px var(--white);
   color: var(--white);
   outline: none;

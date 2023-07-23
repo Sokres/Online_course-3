@@ -38,9 +38,9 @@
   padding: 15px 25px;
   border: none;
   border-radius: 9px;
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
   transition: all .2s ease-in-out;
-  @include focus(var(--yellow2), var(--yellow3), var(--dark))
+  @include focus(var(--turquoise2), var(--turquoise3), var(--dark))
 }
 
 .form-get__btn:hover {

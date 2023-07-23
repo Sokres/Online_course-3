@@ -93,7 +93,7 @@
   width: 100%;
   max-width: 300px;
   border-radius: 9px;
-  background-color: var(--yellow);
+  background-color: var(--turquoise);
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -101,10 +101,10 @@
   color: var(--black)
 }
 .modal__link:hover{
-  background-color: var(--yellow2);
+  background-color: var(--turquoise2);
 }
 .modal__link:focus{
-  background-color: var(--yellow2);
+  background-color: var(--turquoise2);
 }
 .modal__video{
   position: relative;

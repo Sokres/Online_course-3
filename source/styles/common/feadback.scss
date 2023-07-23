@@ -21,6 +21,9 @@
   padding: 0 20px;
   text-align: center;
 }
+.fedback-info__title--color{
+  color: var(--yellow);
+}
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -62,7 +65,7 @@
 .feadback-info{
 
   padding: 30px 40px;
-  background-color: var(--blue);
+  background-color: #ffffff;
   // background-image: url('../img/blue-curve.svg');
   // background-repeat: no-repeat;
   // background-size: cover;
@@ -71,7 +74,7 @@
 .fedback-info__title{
   margin: 0;
   text-align: center;
-  color: var(--yellow2);
+  color: var(--turquoise2);
 }
 
 @include media-md{
