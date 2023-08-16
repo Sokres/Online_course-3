@@ -1,0 +1,28 @@
+@import "node_modules/normalize.css/normalize";
+@import "common/global";
+@import "common/header";
+@import "common/footer";
+
+
+@import "prom/main";
+@import "prom/benefits";
+@import "prom/result";
+@import "prom/word";
+@import "prom/how";
+@import "prom/price";
+@import "prom/inform";
+@import "prom/fin";
+@import "prom/ask";
+
+
+
+
+// Переменные
+:root{
+  --textcolor: #404956;
+  --subcolor: #563EA2;
+  --altyellow: #9E8600;
+  --vebinaryellow: #FFD803;
+  --teal: #3FF6FA;
+
+}

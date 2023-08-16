@@ -1,0 +1,111 @@
+/* Кнопка ЗАДАТЬ ВОПРОС */
+
+.ask {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+}
+.ask:hover{
+  animation: none;
+}
+
+
+.ask__btn {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: var(--turquoise);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  font-weight: 500;
+  z-index: 100;
+  // color: var(--dark);
+}
+
+.ask__btn:hover {
+  background-color: var(--turquoise2);
+}
+
+.ask__socail {
+  @extend .list-none;
+  position: absolute;
+  bottom: 130px;
+  left: 0;
+  right: 0;
+  justify-content: space-around;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+  transform: translateY(80px);
+}
+
+.ask__icon {
+  width: auto;
+  // position: absolute;
+  // top: 0;
+  // left: 50%;
+  display: block;
+  margin: 10px 10px;
+  // transform: translateX(-50%);
+  transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+.ask__icon:hover {
+  transform: scale(1.1);
+}
+.ask__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  // border: 10px solid var(--white);
+  // border-radius: 100%;
+  // box-shadow: 0 0 0 2px var(--turquoise);
+}
+
+.ask__link--inline {
+  width: 100%;
+  height: auto;
+}
+
+/* Скрытие социальных кнопок */
+
+.ask__btn[aria-expanded="true"] {
+  // box-shadow: 0 0 0 2px var(--blue);
+  background-color: var(--turquoise2);
+}
+
+.ask__socail[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(60px);
+
+  // display: block;
+  // .ask__icon:nth-child(1) {
+  //   transform: translateX(-270%);
+  // }
+
+  // .ask__icon:nth-child(2) {
+  //   transform: translateX(-130%) translateY(40px);
+  // }
+
+  // .ask__icon:nth-child(3) {
+  //   transform: translateX(30%) translateY(40px);
+  // }
+
+  // .ask__icon:nth-child(4) {
+  //   transform: translateX(170%);
+  // }
+}
+
+@include media-md {
+.ask {
+  max-width: 250px;
+}
+}

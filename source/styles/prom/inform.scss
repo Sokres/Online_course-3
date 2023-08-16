@@ -1,0 +1,51 @@
+.inform{
+  padding: 0 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.inform__title{
+
+}
+.inform__list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.inform__item{
+  position: relative;
+  margin-left: 55px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  &::after{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -55px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/vebinar-pron/w-tick.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--vebinaryellow);
+    background: linear-gradient(64deg, #FDD604 0%, rgba(255, 215, 0, 0.00) 100%);
+
+  }
+}
+@include media-md {
+  .inform{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .inform__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
