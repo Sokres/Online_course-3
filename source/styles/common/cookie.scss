@@ -1,0 +1,43 @@
+.cookie {
+  position: fixed;
+  bottom: 50px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 999;
+  margin-inline: 20px;
+}
+
+.cookie_title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--turquoise);
+}
+
+.cookie_btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: var(--turquoise);
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--turquoise3);
+  }
+}
+
+@include media-md {
+  .cookie {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

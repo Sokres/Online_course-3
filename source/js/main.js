@@ -1,50 +1,55 @@
 /* Модальное окно */
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  const modalButtons = document.querySelectorAll('.btn-modal');
-  const overlay = document.querySelector('.modal-js-overlay');
-  const closeButtons = document.querySelectorAll('.modal-js-close');
+document.addEventListener("DOMContentLoaded", function () {
+  const modalButtons = document.querySelectorAll(".btn-modal");
+  const overlay = document.querySelector(".modal-js-overlay");
+  const closeButtons = document.querySelectorAll(".modal-js-close");
 
   if (modalButtons && overlay) {
     modalButtons.forEach(function (item) {
-
-      item.addEventListener('click', function (e) {
-
+      item.addEventListener("click", function (e) {
         e.preventDefault();
 
-        let modalId = this.getAttribute('data-modal');
-        let modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
-        modalElem.classList.add('modal--active');
-        overlay.classList.add('modal--active');
+        let modalId = this.getAttribute("data-modal");
+        let modalElem = document.querySelector(
+          '.modal[data-modal="' + modalId + '"]'
+        );
+        modalElem.classList.add("modal--active");
+        overlay.classList.add("modal--active");
       });
     });
-
 
     closeButtons.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        let parentModal = this.closest(".modal");
 
-      item.addEventListener('click', function (e) {
-        let parentModal = this.closest('.modal');
-
-        parentModal.classList.remove('modal--active');
-        overlay.classList.remove('modal--active');
+        parentModal.classList.remove("modal--active");
+        overlay.classList.remove("modal--active");
       });
-
     });
 
-    document.body.addEventListener('keyup', function (e) {
-      let key = e.keyCode;
+    document.body.addEventListener(
+      "keyup",
+      function (e) {
+        let key = e.keyCode;
 
-      if (key == 27) {
+        if (key == 27) {
+          document
+            .querySelector(".modal.modal--active")
+            .classList.remove("modal--active");
+          document
+            .querySelector(".modal-overlay")
+            .classList.remove("modal--active");
+        }
+      },
+      false
+    );
 
-        document.querySelector('.modal.modal--active').classList.remove('modal--active');
-        document.querySelector('.modal-overlay').classList.remove('modal--active');
-      };
-    }, false);
-
-    overlay.addEventListener('click', function () {
-      document.querySelector('.modal.modal--active').classList.remove('modal--active');
-      this.classList.remove('modal--active');
+    overlay.addEventListener("click", function () {
+      document
+        .querySelector(".modal.modal--active")
+        .classList.remove("modal--active");
+      this.classList.remove("modal--active");
     });
     /* отыкрытие модального окна по счетчику */
 
@@ -56,117 +61,155 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(modalTimesUp, 30); */
 
     /* ---------- */
-  };
+  }
 });
-
-
-
-
 
 /* кнопка связи в соц сетях */
 
 (function () {
-  let toggle = document.getElementById('nav-toggle')
-  let content = document.getElementById('nav-content')
+  let toggle = document.getElementById("nav-toggle");
+  let content = document.getElementById("nav-content");
 
   let show = () => {
-    toggle.setAttribute('aria-expanded', true)
-    content.setAttribute('aria-hidden', false)
-  }
+    toggle.setAttribute("aria-expanded", true);
+    content.setAttribute("aria-hidden", false);
+  };
 
   let hide = () => {
-    toggle.setAttribute('aria-expanded', false)
-    content.setAttribute('aria-hidden', true)
-  }
+    toggle.setAttribute("aria-expanded", false);
+    content.setAttribute("aria-hidden", true);
+  };
 
-  toggle.addEventListener('click', event => {
-    event.stopPropagation()
-    JSON.parse(toggle.getAttribute('aria-expanded')) ? hide() : show()
-  })
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    JSON.parse(toggle.getAttribute("aria-expanded")) ? hide() : show();
+  });
 
-  let handleClosure = event => !content.contains(event.target) && hide()
+  let handleClosure = (event) => !content.contains(event.target) && hide();
 
-  window.addEventListener('click', handleClosure)
-  window.addEventListener('focusin', handleClosure)
+  window.addEventListener("click", handleClosure);
+  window.addEventListener("focusin", handleClosure);
 })();
 (function () {
-  let askToggle = document.getElementById('ask-toggle')
-  let askContent = document.getElementById('ask-content')
+  let askToggle = document.getElementById("ask-toggle");
+  let askContent = document.getElementById("ask-content");
 
   let show = () => {
-    askToggle.setAttribute('aria-expanded', true)
-    askContent.setAttribute('aria-hidden', false)
+    askToggle.setAttribute("aria-expanded", true);
+    askContent.setAttribute("aria-hidden", false);
     askToggle.querySelector("use").setAttribute("href", "#close_message");
-  }
+  };
 
   let hide = () => {
-    askToggle.setAttribute('aria-expanded', false)
-    askContent.setAttribute('aria-hidden', true)
+    askToggle.setAttribute("aria-expanded", false);
+    askContent.setAttribute("aria-hidden", true);
     askToggle.querySelector("use").setAttribute("href", "#message");
-  }
+  };
 
-  askToggle.addEventListener('click', event => {
-    event.stopPropagation()
-    JSON.parse(askToggle.getAttribute('aria-expanded')) ? hide() : show()
-  })
+  askToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    JSON.parse(askToggle.getAttribute("aria-expanded")) ? hide() : show();
+  });
 
-  let handleClosure = event => !askContent.contains(event.target) && hide()
+  let handleClosure = (event) => !askContent.contains(event.target) && hide();
 
-  window.addEventListener('click', handleClosure)
-  window.addEventListener('focusin', handleClosure)
+  window.addEventListener("click", handleClosure);
+  window.addEventListener("focusin", handleClosure);
 })();
 (function () {
   function initAcc(elem, option) {
-    document.addEventListener('click', function (e) {
-      if (!e.target.matches(elem + ' .accordion__btn')) return;
+    document.addEventListener("click", function (e) {
+      if (!e.target.matches(elem + " .accordion__btn")) return;
       else {
-        if (!e.target.parentElement.classList.contains('accordion__container--active')) {
+        if (
+          !e.target.parentElement.classList.contains(
+            "accordion__container--active"
+          )
+        ) {
           if (option == true) {
-            var elementList = document.querySelectorAll(elem + ' .accordion__container');
+            var elementList = document.querySelectorAll(
+              elem + " .accordion__container"
+            );
             Array.prototype.forEach.call(elementList, function (e) {
-              e.classList.remove('accordion__container--active');
+              e.classList.remove("accordion__container--active");
             });
           }
-          e.target.parentElement.classList.add('accordion__container--active');
+          e.target.parentElement.classList.add("accordion__container--active");
         } else {
-          e.target.parentElement.classList.remove('accordion__container--active');
+          e.target.parentElement.classList.remove(
+            "accordion__container--active"
+          );
         }
       }
     });
   }
 
-  initAcc('.accordion__box', true);
+  initAcc(".accordion__box", true);
 })();
 //
 
+(function () {
+  function setupCookieConsent() {
+    const banner = document.querySelector(".cookie");
+    const storageKey = "cookie_info"; // Определяем ключ для localStorage
 
+    if (localStorage.getItem(storageKey)) {
+      if (banner) {
+        banner.style.display = "none";
+      }
+      return;
+    }
 
+    const button = document.querySelector(".cookie_btn");
+    if (button && banner) {
+      button.addEventListener("click", function () {
+        const expirationDate = new Date();
+        expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+
+        const consentData = {
+          accepted: true,
+          expires: expirationDate.toISOString(),
+        };
+
+        localStorage.setItem(storageKey, JSON.stringify(consentData));
+        banner.style.display = "none";
+      });
+    }
+  }
+
+  // Запускаем после полной загрузки DOM
+  document.addEventListener("DOMContentLoaded", function () {
+    setupCookieConsent();
+  });
+})();
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  var lazyImages = [].slice.call(
-    document.querySelectorAll(".lazy > source")
-  )
+  var lazyImages = [].slice.call(document.querySelectorAll(".lazy > source"));
 
-  if ("IntersectionObserver" in window && 'IntersectionObserverEntry' in window) {
-    let lazyImageObserver =
-      new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            let lazyImage = entry.target;
-            lazyImage.srcset = lazyImage.dataset.srcset;
-            lazyImage.nextElementSibling.srcset = lazyImage.dataset.srcset;
-            lazyImage.nextElementSibling.classList.add('fade-in');
-            lazyImage.parentElement.classList.remove("lazy");
-            lazyImageObserver.unobserve(lazyImage);
-          }
-        });
+  if (
+    "IntersectionObserver" in window &&
+    "IntersectionObserverEntry" in window
+  ) {
+    let lazyImageObserver = new IntersectionObserver(function (
+      entries,
+      observer
+    ) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.srcset = lazyImage.dataset.srcset;
+          lazyImage.nextElementSibling.srcset = lazyImage.dataset.srcset;
+          lazyImage.nextElementSibling.classList.add("fade-in");
+          lazyImage.parentElement.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
       });
+    });
 
     lazyImages.forEach(function (lazyImage) {
       lazyImageObserver.observe(lazyImage);
     });
   } else {
-
     // Not supported, load all images immediately
     let active = false;
 
@@ -175,10 +218,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         active = true;
         setTimeout(function () {
           lazyImages.forEach(function (lazyImage) {
-            if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+            if (
+              lazyImage.getBoundingClientRect().top <= window.innerHeight &&
+              lazyImage.getBoundingClientRect().bottom >= 0 &&
+              getComputedStyle(lazyImage).display !== "none"
+            ) {
               lazyImage.srcset = lazyImage.dataset.srcset;
               lazyImage.nextElementSibling.src = lazyImage.dataset.srcset;
-              lazyImage.nextElementSibling.classList.add('fade-in');
+              lazyImage.nextElementSibling.classList.add("fade-in");
               lazyImage.parentElement.classList.remove("lazy");
 
               lazyImages = lazyImages.filter(function (image) {
@@ -202,12 +249,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     window.addEventListener("resize", lazyLoad);
     window.addEventListener("orientationchange", lazyLoad);
   }
-
 });
 
-
 /* подключение RELLAX JS */
-var rellax = new Rellax('.rellax', {
+var rellax = new Rellax(".rellax", {
   // wrapper:'.custom-element'
 });
 
@@ -231,8 +276,8 @@ var swiper = new Swiper(".mySwiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  }
+  },
   // lazy: true,
 });
 
-Sticksy.initializeAll('.js-sticky-widget', { listen: true })
+Sticksy.initializeAll(".js-sticky-widget", { listen: true });
